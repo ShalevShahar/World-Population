@@ -37,6 +37,13 @@
      font-family: sans-serif;
      margin: 1px;
      padding: 10px;
+     background-color: #f1f1c1;
+ }
+ 
+ .tableCountries th,
+ td {
+     padding: 5px;
+     text-align: left;
  }
  
  .runnigCount {
@@ -98,17 +105,3 @@
      font-size: 5rem;
      white-space: nowrap;
  }
- /* {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- } */
- /* body {
-     font-family: 'Montserrat', sans-serif;
-     background-color: #eee;
-     color: #111;
-     height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- } */

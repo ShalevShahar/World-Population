@@ -43,6 +43,53 @@ async function currentPopByCountry() {
         allCountriesPop2019.push(countryData[1]);
         allCountriesPop2020.push(countryData[2]);
     }
-    console.log(allCountriesNames, allCountriesPop2019, allCountriesPop2020);
+
+
+
+    // const obj = document.getElementById("countriesId");
+    // obj.innerHTML = parseInt(filteredCountries).toLocaleString();
+
+    window.addEventListener("load", function() {
+        // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+        // DRAW THE HTML TABLE
+        var perrow = 1, // 3 items per row
+            html = "<table><tr>";
+
+        // Loop through array and add table cells
+        for (var i = 0; i < allCountriesNames.length; i++) {
+            html += "<td>" + allCountriesNames[i] + "</td>";
+            // Break into next row
+            var next = i + 1;
+            if (next % perrow == 0 && next != allCountriesNames.length) {
+                html += "</tr><tr>";
+            }
+        }
+        html += "</tr></table>";
+
+        // ATTACH HTML TO CONTAINER
+        document.getElementById("container").innerHTML = html;
+    });
+
+
+    window.addEventListener("load", function() {
+        // LET'S SAY THAT WE HAVE A SIMPLE FLAT ARRAY
+        // DRAW THE HTML TABLE
+        var perrow = 1, // 3 items per row
+            html = "<table><tr>";
+
+        // Loop through array and add table cells
+        for (var i = 0; i < allCountriesPop2019.length; i++) {
+            html += "<td>" + allCountriesPop2019[i] + "</td>";
+            // Break into next row
+            var next = i + 1;
+            if (next % perrow == 0 && next != allCountriesPop2019.length) {
+                html += "</tr><tr>";
+            }
+        }
+        html += "</tr></table>";
+
+        // ATTACH HTML TO CONTAINER
+        document.getElementById("container2").innerHTML = html;
+    });
 }
 currentPopByCountry()
