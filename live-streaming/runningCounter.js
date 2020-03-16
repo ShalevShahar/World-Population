@@ -1,5 +1,9 @@
 //function the calculates the current world population
 
+
+
+
+
 async function currentPopCalc() {
     //fetching the file and converting it to text
     const response = await fetch('countries2019-2020.csv');
@@ -28,23 +32,36 @@ async function currentPopCalc() {
 }
 currentPopCalc()
 
+
+
+
 //function - per country world population
 async function currentPopByCountry() {
     //fetching the file and converting it to text
+
     const response = await fetch('countries2019-2020.csv');
     let data1 = await response.text();
     data1Splitted = data1.split('\n')
+
+
+    const timeJuliFirst2019 = 1561939200
+    const dateNow = Math.floor(new Date().getTime() * 0.001);
+
     const allCountriesNames = []
-    const allCountriesPop2019 = []
-    const allCountriesPop2020 = []
+    const allCountriesPopNow = []
+    const gap20192020 = (1593561600 - 1561939200)
     for (i = 1; i < 236; i++) {
         countryData = data1Splitted[i].split(',')
         allCountriesNames.push(countryData[0])
-        allCountriesPop2019.push(countryData[1]);
-        allCountriesPop2020.push(countryData[2]);
+        CountryPop2019 = countryData[1];
+        CountryPop2020 = countryData[2];
+        CountryPopDiff = CountryPop2020 - CountryPop2019
+        CountryPopRate = parseFloat(CountryPopDiff / gap20192020)
+        CountyPopNow = parseFloat(CountryPop2019) + (parseFloat(CountryPopRate) * (parseFloat(dateNow) - parseFloat(timeJuliFirst2019)))
+
     }
-
-
+    allCountriesPopNow.push(parseInt(CountyPopNow).toLocaleString())
+    console.log(allCountriesPopNow)
 
     // const obj = document.getElementById("countriesId");
     // obj.innerHTML = parseInt(filteredCountries).toLocaleString();
@@ -68,6 +85,7 @@ async function currentPopByCountry() {
 
         // ATTACH HTML TO CONTAINER
         document.getElementById("container").innerHTML = html;
+
     });
 
 
@@ -78,11 +96,12 @@ async function currentPopByCountry() {
             html = "<table><tr>";
 
         // Loop through array and add table cells
-        for (var i = 0; i < allCountriesPop2019.length; i++) {
-            html += "<td>" + allCountriesPop2019[i] + "</td>";
+        for (var i = 0; i < allCountriesPopNow.length; i++) {
+            html += "<td>" + allCountriesPopNow[i] + "</td>";
             // Break into next row
             var next = i + 1;
-            if (next % perrow == 0 && next != allCountriesPop2019.length) {
+            if (next % perrow == 0 && next != allCountriesPopNow.length) {
+
                 html += "</tr><tr>";
             }
         }
@@ -91,5 +110,6 @@ async function currentPopByCountry() {
         // ATTACH HTML TO CONTAINER
         document.getElementById("container2").innerHTML = html;
     });
+    setTimeout(currentPopByCountry, 5000);
 }
 currentPopByCountry()
