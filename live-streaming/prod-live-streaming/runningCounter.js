@@ -1,9 +1,5 @@
 //function the calculates the current world population
 
-
-
-
-
 async function currentPopCalc() {
     //fetching the file and converting it to text
     const response = await fetch('countries2019-2020.csv');
@@ -58,9 +54,9 @@ async function currentPopByCountry() {
         CountryPopDiff = CountryPop2020 - CountryPop2019
         CountryPopRate = parseFloat(CountryPopDiff / gap20192020)
         CountyPopNow = parseFloat(CountryPop2019) + (parseFloat(CountryPopRate) * (parseFloat(dateNow) - parseFloat(timeJuliFirst2019)))
-
+        allCountriesPopNow.push(parseInt(CountyPopNow).toLocaleString())
     }
-    allCountriesPopNow.push(parseInt(CountyPopNow).toLocaleString())
+
     console.log(allCountriesPopNow)
 
     // const obj = document.getElementById("countriesId");
@@ -110,6 +106,6 @@ async function currentPopByCountry() {
         // ATTACH HTML TO CONTAINER
         document.getElementById("container2").innerHTML = html;
     });
-    setTimeout(currentPopByCountry, 5000);
+    setTimeout(currentPopByCountry, 10000);
 }
 currentPopByCountry()
