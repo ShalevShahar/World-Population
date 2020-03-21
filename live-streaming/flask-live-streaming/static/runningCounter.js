@@ -31,6 +31,24 @@ currentPopCalc()
 
 
 
+// var intervalID = setInterval(update_values, 10000);
+
+// function update_values() {
+//     $.getJSON('/_hi',
+//         function(data) {
+//             $('#ela').text(data.ela);
+//         })
+//     document.getElementById('ela').innerHTML
+// }
+// update_values()
+
+
+
+
+
+
+
+
 //function - per country world population
 async function currentPopByCountry() {
     //fetching the file and converting it to text
