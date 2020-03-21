@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- hiiiiii -->
 
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Population page</title>
-    <link rel='stylesheet' href='StreamingStyle.css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='StreamingStyle.css') }}">
+
 </head>
 
 <body>
@@ -17,21 +21,22 @@
             <h1>Population by country</h1>
         </div>
     </header>
+    <p>{{ela}}</p>
     <div class="runnigCount" id="c">100</div>
 
     <div class=news>
         <ul class=News-content>
-            <li>Ela is Cute</li>
+            <li>{{ela}}</li>
 
             <li>Ela is Cute</li>
         </ul>
     </div>
     <table class="tableCountries" border=10000 frame=void>
         <td id="container"></td>
-        <script src='runningCounter.js' charset="utf-8"></script>
+        <script src="{{url_for('static', filename='runningCounter.js')}}"></script>
         <td id="container2"></td>
     </table>
 </body>
-<!-- .. -->
+
 
 </html>
