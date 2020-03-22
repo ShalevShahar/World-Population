@@ -1,9 +1,11 @@
 # Modules and Libraries
 from flask import Flask, escape, request, render_template, redirect,url_for,jsonify
+from flask_socketio import SocketIO, emit
 import pandas as pd
 import numpy as np
 import sys
 import time
+
 
 # Import data
 data = pd.read_csv('static/countries2019-2020.csv')
@@ -28,6 +30,16 @@ df['popRate'] = df['popGap'] / timeGap20192020
 # APP SERVER + connection to HTML
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['SECRET_KEY'] = 'secret'
+socketio = SocketIO(app)
+
+@socketio.on('my event')
+
+
+def test_message(message):                        # test_message() is the event callback function.
+    emit('my response', {'data': 'got it!'})  
+
+
 @app.route('/', methods=['GET'])
 def popStream():
         dateNow = time.time()
@@ -38,5 +50,5 @@ def popStream():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)       
+    socketio.run(app,debug=True)       
     
