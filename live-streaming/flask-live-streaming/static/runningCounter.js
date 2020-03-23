@@ -30,18 +30,19 @@ currentPopCalc()
 
 
 
+var intervalID = setInterval(update_values, 1000);
 
-// var intervalID = setInterval(update_values, 10000);
+function update_values() {
+    $.getJSON($SCRIPT_ROOT + '/_popStream',
 
-// function update_values() {
-//     $.getJSON('/_hi',
-//         function(data) {
-//             $('#ela').text(data.ela);
-//         })
-//     document.getElementById('ela').innerHTML
-// }
-// update_values()
+        function(data) {
+            $('#china').text(data.china);
+            console.log(data)
+        });
 
+};
+
+update_values()
 
 
 
@@ -124,6 +125,5 @@ async function currentPopByCountry() {
         // ATTACH HTML TO CONTAINER
         document.getElementById("container2").innerHTML = html;
     });
-    setTimeout(currentPopByCountry, 10000);
 }
 currentPopByCountry()

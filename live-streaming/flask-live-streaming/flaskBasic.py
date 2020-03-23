@@ -29,26 +29,21 @@ df['popRate'] = df['popGap'] / timeGap20192020
 
 # APP SERVER + connection to HTML
 app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.config['SECRET_KEY'] = 'secret'
-socketio = SocketIO(app)
 
-@socketio.on('my event')
-
-
-def test_message(message):                        # test_message() is the event callback function.
-    emit('my response', {'data': 'got it!'})  
-
-
-@app.route('/', methods=['GET'])
+@app.route('/_popStream', methods=['GET'])
 def popStream():
         dateNow = time.time()
         timePassed = (int(dateNow) - timeJuly2019)
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
-        return render_template('PopulationStreaming.html', ela =df['popNow'][40])
-    
+        china = df['popNow'][40]
+        return jsonify(china = china)
+
+
+@app.route('/')
+def index():
+        return render_template('PopulationStreaming.html')
 
 
 if __name__ == '__main__':
-    socketio.run(app,debug=True)       
+    app.run()       
     

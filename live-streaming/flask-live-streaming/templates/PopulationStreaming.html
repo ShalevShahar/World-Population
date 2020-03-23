@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="update_values();">
     <header>
         <div class="totalWorldTitle">
             <h1>World Population</h1>
@@ -21,12 +21,15 @@
             <h1>Population by country</h1>
         </div>
     </header>
-    <span id="ela">{{ela}}</span>
+    <span id="china">{{china}}</span>
+    <script>
+        document.getElementById("china").innerHTML;
+    </script>
     <div class="runnigCount" id="c">100</div>
 
     <div class=news>
         <ul class=News-content>
-            <li>{{ela}}</li>
+            <li id='china'>{{china}}</li>
 
             <li>Ela is Cute</li>
         </ul>
