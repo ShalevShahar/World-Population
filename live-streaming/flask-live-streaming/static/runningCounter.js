@@ -24,25 +24,22 @@ async function currentPopCalc() {
     const obj = document.getElementById("c");
     obj.innerHTML = parseInt(popNow).toLocaleString();
     //repitition time in milisecs of the function 
-    setTimeout(currentPopCalc, 100);
+    setTimeout(currentPopCalc, 100000);
 }
 currentPopCalc()
 
 
 
-var intervalID = setInterval(update_values, 1000);
+// var intervalID = setInterval(update_values, 1000);
 
-function update_values() {
-    $.getJSON($SCRIPT_ROOT + '/_popStream',
+// function update_values() {
+//     $.getJSON($SCRIPT_ROOT + '/_popStream',
+//         function(data) {
+//             $('#china').text(data.china);
+//             console.log(data)
+//         });
+// };
 
-        function(data) {
-            $('#china').text(data.china);
-            console.log(data)
-        });
-
-};
-
-update_values()
 
 
 

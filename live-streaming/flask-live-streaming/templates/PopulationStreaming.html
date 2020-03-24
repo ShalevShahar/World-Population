@@ -9,10 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Population page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='StreamingStyle.css') }}">
-
 </head>
 
-<body onload="update_values();">
+<body>
     <header>
         <div class="totalWorldTitle">
             <h1>World Population</h1>
@@ -22,15 +21,25 @@
         </div>
     </header>
     <span id="china">{{china}}</span>
+    <script type="text/javascript">
+        var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
+        var intervalID = setInterval(update_values, 1000);
+
+        function update_values() {
+            $.getJSON($SCRIPT_ROOT + '/_popStream',
+                function(data) {
+                    $('#china').text(data.china);
+                    console.log(data)
+                });
+        };
+    </script>
     <script>
         document.getElementById("china").innerHTML;
     </script>
     <div class="runnigCount" id="c">100</div>
-
     <div class=news>
         <ul class=News-content>
             <li id='china'>{{china}}</li>
-
             <li>Ela is Cute</li>
         </ul>
     </div>
@@ -39,9 +48,8 @@
 
         <td id="container2"></td>
     </table>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='runningCounter.js')}}"></script>
 </body>
-
 
 </html>

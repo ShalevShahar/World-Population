@@ -35,7 +35,7 @@ def popStream():
         dateNow = time.time()
         timePassed = (int(dateNow) - timeJuly2019)
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
-        china = df['popNow'][40]
+        china = df['popNow'][40].astype(int)
         return jsonify(china = china)
 
 
@@ -45,5 +45,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()       
+    app.run(debug=True)       
     
