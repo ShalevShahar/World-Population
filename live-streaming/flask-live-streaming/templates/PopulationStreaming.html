@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- hiiiiii -->
 
 <head>
     <meta charset='utf-8'>
@@ -14,40 +13,21 @@
 <body>
     <header>
         <div class="totalWorldTitle">
-            <h1>World Population</h1>
+            <h1>Total World Population</h1>
         </div>
         <div class="allCountriesTitle">
-            <h1>Population by country</h1>
+            <h1>Population by Country</h1>
         </div>
     </header>
-    <span id="china">{{china}}</span>
-    <script type="text/javascript">
-        var $SCRIPT_ROOT = '{{ request.script_root|tojson|safe }}';
-        var intervalID = setInterval(update_values, 1000);
-
-        function update_values() {
-            $.getJSON($SCRIPT_ROOT + '/_popStream',
-                function(data) {
-                    $('#china').text(data.china);
-                    console.log(data)
-                });
-        };
-    </script>
-    <script>
-        document.getElementById("china").innerHTML;
-    </script>
-    <div class="runnigCount" id="c">100</div>
-    <div class=news>
-        <ul class=News-content>
-            <li id='china'>{{china}}</li>
-            <li>Ela is Cute</li>
-        </ul>
+    <div class="runnigCount" id="c">total world population</div>
+    <div class="tableCountriesFrame">
+        <table id="tableCountries" frame=void>
+        </table>
     </div>
-    <table class="tableCountries" border=10000 frame=void>
-        <td id="container"></td>
-
-        <td id="container2"></td>
-    </table>
+    <div class="topCountriesFrame">
+        <table id="topCountries" frame=void>
+        </table>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='runningCounter.js')}}"></script>
 </body>
