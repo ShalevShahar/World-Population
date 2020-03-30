@@ -11,7 +11,7 @@ import time
 data = pd.read_csv('static/countries2019-2020.csv')
 df = pd.DataFrame(data)
 df = df[0:235] #remove the last row which is the total world
-
+ 
 # Global variables
 # epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
 timeJuly2019 = 1561939200

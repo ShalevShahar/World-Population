@@ -1,12 +1,5 @@
     body {
-        background-color: black;
-    }
-    
-    block {
-        color: red;
-        font-size: 20px;
-        background-color: yellow;
-        -webkit-animation: yellow-fade 1s ease-in-out 0s;
+        background-color: white;
     }
     
     .totalWorldTitle {
@@ -15,7 +8,7 @@
         font-weight: bold;
         /* background-color: rgb(116, 126, 143); */
         position: absolute;
-        left: 400px;
+        left: 550px;
         text-align: center;
         font-family: sans-serif;
         /* border-radius: 30px; */
@@ -24,19 +17,19 @@
     }
     
     .runnigCount {
-        color: rgb(120, 131, 125);
+        color: black;
         font-size: 6ex;
         position: relative;
         text-align: center;
         font-family: sans-serif;
         padding: 20px;
         display: inline;
-        left: 400px;
+        left: 550px;
         top: 80px;
     }
     
     .allCountriesTitle {
-        color: rgb(197, 20, 20);
+        color: black;
         font-size: 2ex;
         font-weight: bold;
         position: absolute;
@@ -53,7 +46,6 @@
         width: 420px;
         overflow: hidden;
         position: relative;
-        color: orange;
         top: 20px;
         bottom: 0px;
     }
@@ -82,36 +74,54 @@
     td {
         padding: 5px;
         text-align: left;
-        color: rgb(186, 202, 161);
+        color: black;
         /* additional */
         /* height: 100%; */
         /* animation: scrolling 60s linear infinite; */
         /* top: 1000px; */
     }
     
+    .topCountriesTitle {
+        color: black;
+        font-size: 2ex;
+        font-weight: bold;
+        position: absolute;
+        left: 1000px;
+        text-align: center;
+        font-family: sans-serif;
+        /* border-radius: 30px; */
+        margin: 10px;
+        /* padding: 10px; */
+    }
+    
     .topCountriesFrame {
         height: 700px;
-        width: 450px;
-        overflow: hidden;
+        width: 420px;
         position: absolute;
-        top: 40px;
-        left: 900px;
+        top: 70px;
+        left: 950px;
     }
     
     #topCountries {
         text-align: center;
         font-family: sans-serif;
         position: absolute;
-        margin: 2px;
-        padding: 2px;
+        /* margin: 2px; */
+        padding: 25px;
         text-align: center;
     }
     
     #topCountries td {
-        padding: 2px 20px 0 0;
+        padding-left: 50px;
         text-align: left;
-        color: white;
+        color: black;
         ;
+    }
+    
+    #img {
+        position: absolute;
+        left: 390px;
+        top: 170px;
     }
     /* @keyframes scrolling {
     0% {

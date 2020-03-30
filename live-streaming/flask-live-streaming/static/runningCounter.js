@@ -40,11 +40,11 @@ $(document).ready(function() {
                 $.each(data, function(key, value) {
                     countryData += '<tr>';
                     if (value.popNow > value.popNowMinusSecond) {
-                        countryData += '<td>' + key + '</td>';
-                        countryData += '<td style="border-style: solid; border-width: 0.1px; border-color: green;">' + value.popNow.toLocaleString() + '</td>';
+                        countryData += '<td style="color: green;">' + key + '</td>';
+                        countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                     } else if (value.popNow < value.popNowMinusSecond) {
                         countryData += '<<td>' + key + '</td>';
-                        countryData += '<<td style="color: red;">' + value.popNow.toLocaleString() + '</td>';
+                        countryData += '<<td>' + value.popNow.toLocaleString() + '</td>';
                     } else {
                         countryData += '<td>' + key + '</td>';
                         countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
@@ -95,6 +95,28 @@ function update_country_pop() {
 
         });
 };
+
+var images = [],
+    x = -1;
+images[0] = "/static/popDistribution1950.jpg";
+images[1] = "/static/popDistribution1990.jpg";
+
+
+function displayNextImage() {
+    x = (x === images.length - 1) ? 0 : x + 1;
+    document.getElementById("img").src = images[x];
+}
+
+function displayPreviousImage() {
+    x = (x <= 0) ? images.length - 1 : x - 1;
+    document.getElementById("img").src = images[x];
+}
+
+function startTimer() {
+    setInterval(displayNextImage, 10000);
+}
+
+
 
 
 // var intervalID = setInterval(update_world_pop, 1000);

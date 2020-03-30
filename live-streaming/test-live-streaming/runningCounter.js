@@ -161,6 +161,6 @@ async function currentPopByCountry() {
         // ATTACH HTML TO CONTAINER
         document.getElementById("container2").innerHTML = html;
     });
-    setTimeout(currentPopByCountry, 10000);
+    setTimeout(currentPopByCountry, 1000);
 }
 currentPopByCountry()

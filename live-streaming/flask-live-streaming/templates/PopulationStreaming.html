@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='StreamingStyle.css') }}">
 </head>
 
-<body>
+<body onload = "startTimer()">
     <header>
         <div class="totalWorldTitle">
             <h1>Total World Population</h1>
         </div>
         <div class="allCountriesTitle">
             <h1>Population by Country</h1>
+        </div>
+        <div class="topCountriesTitle">
+            <h1>Top 20 Countries</h1>
         </div>
     </header>
     <div class="runnigCount" id="c">total world population</div>
@@ -27,6 +30,9 @@
     <div class="topCountriesFrame">
         <table id="topCountries" frame=void>
         </table>
+    </div>
+    <div> 
+       <img id="img" src="/static/DeathBirthProjections.jpg"/>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='runningCounter.js')}}"></script>
