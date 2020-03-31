@@ -21,6 +21,7 @@ timeGap20192020 = timeJuly2020 - timeJuly2019
 #country name
 countryName = df['Location']
 
+
 #pop 2019, 2020 and gap
 
 df['popGap'] = df['pop2020'] - df['pop2019']
@@ -36,30 +37,29 @@ def allCountries():
         dateNow = time.time()
         timePassed = (int(dateNow) - timeJuly2019)
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
-        df1 = df.set_index('Location').loc[:, 'popNow']
-        df1 = df1.sort_values(axis=0, ascending =False)
-        allCountries = df1.to_json()
+        df1 = df.sort_values(axis=0, ascending =False, by='popNow' )
+        df1['rank'] = np.arange(1, len(df) + 1 ) 
+        df2 = df1.set_index('Location').loc[:, ['rank','popNow']]
+        allCountries = df2.to_json(orient='index')
         return  allCountries     
-   
-   
-
-
- 
+    
 @app.route('/_topCountries', methods=['GET'])
 def topCountries():
         dateNow = time.time()
         timePassed = (int(dateNow) - timeJuly2019)
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
-        
-        #calculating pop minus 1 second
+        df2 = df.sort_values(axis=0, ascending =False, by='popNow').head(20)
+        df2['rank'] = np.arange(1, len(df2) + 1 ) 
         timePassedMinusOne = int(timePassed) - 2
-        df['popNowMinusSecond'] =(df['pop2019'] + df['popRate'] * timePassedMinusOne).astype(int)
-        
-        df1 = df.set_index('Location').loc[:, ['popNow', 'popNowMinusSecond']]
-        df1 = df1.sort_values(axis=0, ascending =False, by='popNow').head(20)
-        
-        topCountries = df1.to_json(orient='index')
-        print(timePassedMinusOne)
+        timePassedPlusFour = int(timePassed) + 2
+        timePassedPlusFive = int(timePassed) + 2
+        df2['popNowMinusSecond'] =(df2['pop2019'] + df2['popRate'] * timePassedMinusOne).astype(int)
+        df2['popNowPlusFour'] =(df2['pop2019'] + df2['popRate'] * timePassedPlusFour).astype(int)
+        df2['popNowPlusFive'] =(df2['pop2019'] + df2['popRate'] * timePassedPlusFive).astype(int)
+        df3 = df2.set_index('Location').loc[:, ['rank','popNow', 'popNowMinusSecond','popNowPlusFour','popNowPlusFive']]
+        #calculating pop minus 1 second
+        topCountries = df3.to_json(orient='index')
+        print(df3)
         return  topCountries    
 
 

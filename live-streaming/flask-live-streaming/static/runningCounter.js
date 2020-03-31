@@ -31,7 +31,7 @@ currentPopCalc()
 
 
 $(document).ready(function() {
-    var intervalID = setInterval(update_top_countries, 2000);
+    var intervalID = setInterval(update_top_countries, 1000);
 
     function update_top_countries() {
         $.getJSON('http://127.0.0.1:5000' + '/_topCountries',
@@ -39,16 +39,29 @@ $(document).ready(function() {
                 var countryData = '';
                 $.each(data, function(key, value) {
                     countryData += '<tr>';
-                    if (value.popNow > value.popNowMinusSecond) {
-                        countryData += '<td style="color: green;">' + key + '</td>';
-                        countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
-                    } else if (value.popNow < value.popNowMinusSecond) {
-                        countryData += '<<td>' + key + '</td>';
-                        countryData += '<<td>' + value.popNow.toLocaleString() + '</td>';
+                    if (value.popNow > value.popNowMinusSecond) { // all fade in
+                        countryData += '<td>' + value.rank + '.' + '</td>';
+                        countryData += '<td id= "countryIncreases">' + key + '</td>';
+                        countryData += '<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
+                        // popNowPlusFive
+                    } else if (value.popNow < value.popNowPlusFive) { // all fade out
+                        countryData += '<td>' + value.rank + '.' + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
+                    } else if (value.popNow < value.popNowMinusSecond) { // japan fade out
+                        countryData += '<td>' + value.rank + '.' + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
+                    } else if (value.popNow > value.popNowPlusFive) { // japan fade in
+                        countryData += '<td>' + value.rank + '.' + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
+                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
                     } else {
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td>' + key + '</td>';
                         countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                     }
+
                     countryData += '</tr>';
 
                     // var table = document.getElementById("topCountries")
@@ -83,8 +96,9 @@ function update_country_pop() {
             var countryData = '';
             $.each(data, function(key, value) {
                 countryData += '<tr>';
+                countryData += '<td>' + value.rank + '.' + '</td>';
                 countryData += '<td>' + key + '</td>';
-                countryData += '<td>' + value.toLocaleString() + '</td>';
+                countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                 countryData += '</tr>';
 
             })
