@@ -76,6 +76,7 @@ td {
     text-align: left;
     color: black;
     font-size: 20px;
+    padding-left: 20px;
     /* additional */
     /* height: 100%; */
     /* animation: scrolling 60s linear infinite; */
@@ -113,7 +114,7 @@ td {
 }
 
 #topCountries td {
-    padding-left: 3px 1px 25px 25px;
+    padding-left: 20px;
     text-align: left;
     color: black;
     ;
@@ -123,12 +124,20 @@ td {
     position: absolute;
     left: 390px;
     top: 170px;
+    -webkit-animation: fadein2 5s;
 }
 
-#countryIncreases {
-    color: green;
-    -webkit-animation: fadein 5s;
-    -webkit-animation: fadeout 3s;
+@keyframes fadein2 {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+#countryIncreasesFadeIn {
+    -webkit-animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -140,6 +149,10 @@ td {
     }
 }
 
+#countryIncreasesFadeOut {
+    -webkit-animation: fadeout 8s;
+}
+
 @keyframes fadeout {
     from {
         color: green;
@@ -148,6 +161,43 @@ td {
         color: black;
     }
 }
+
+#japanIncreasesFadeIn {
+    -webkit-animation: fadein1 2s;
+}
+
+@keyframes fadein1 {
+    from {
+        color: black;
+    }
+    to {
+        color: red;
+    }
+}
+
+#japanIncreasesFadeOut {
+    -webkit-animation: fadeout1 8s;
+}
+
+@keyframes fadeout1 {
+    from {
+        color: red;
+    }
+    to {
+        color: black;
+    }
+}
+
+
+/* 
+@keyframes fadeout {
+    from {
+        color: green;
+    }
+    to {
+        color: black;
+    }
+} */
 
 
 /* @keyframes scrolling {

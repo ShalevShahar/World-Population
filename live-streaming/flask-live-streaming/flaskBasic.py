@@ -39,7 +39,11 @@ def allCountries():
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
         df1 = df.sort_values(axis=0, ascending =False, by='popNow' )
         df1['rank'] = np.arange(1, len(df) + 1 ) 
-        df2 = df1.set_index('Location').loc[:, ['rank','popNow']]
+        timePassedMinusOne = int(timePassed) - 2
+        timePassedPlusFour = int(timePassed) + 2
+        df1['popNowMinusSecond'] =(df1['pop2019'] + df1['popRate'] * timePassedMinusOne).astype(int)
+        df1['popNowPlusFour'] =(df1['pop2019'] + df1['popRate'] * timePassedPlusFour).astype(int)
+        df2 = df1.set_index('Location').loc[:, ['rank','popNow','popNowPlusFour','popNowMinusSecond']]
         allCountries = df2.to_json(orient='index')
         return  allCountries     
     
@@ -59,7 +63,6 @@ def topCountries():
         df3 = df2.set_index('Location').loc[:, ['rank','popNow', 'popNowMinusSecond','popNowPlusFour','popNowPlusFive']]
         #calculating pop minus 1 second
         topCountries = df3.to_json(orient='index')
-        print(df3)
         return  topCountries    
 
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='StreamingStyle.css') }}">
 </head>
 
-<body onload = "startTimer()">
+<body onload="startTimer()">
     <header>
         <div class="totalWorldTitle">
             <h1>Total World Population</h1>
@@ -31,8 +31,8 @@
         <table id="topCountries" frame=void>
         </table>
     </div>
-    <div> 
-       <img id="img" src="/static/DeathBirthProjections.jpg"/>
+    <div>
+        <img id="img" src="/static/DeathBirthProjections.jpg" height="500" width="600" />
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{url_for('static', filename='runningCounter.js')}}"></script>

@@ -1,4 +1,4 @@
-//function the calculates the current world population
+//////////////// MIDDLE TOTAL POP
 
 async function currentPopCalc() {
     //fetching the file and converting it to text
@@ -30,8 +30,10 @@ currentPopCalc()
 
 
 
+//////////////// RIGHT TOP COUNTRIES
+
 $(document).ready(function() {
-    var intervalID = setInterval(update_top_countries, 1000);
+    var intervalID = setInterval(update_top_countries, 2000);
 
     function update_top_countries() {
         $.getJSON('http://127.0.0.1:5000' + '/_topCountries',
@@ -39,45 +41,28 @@ $(document).ready(function() {
                 var countryData = '';
                 $.each(data, function(key, value) {
                     countryData += '<tr>';
-                    if (value.popNow > value.popNowMinusSecond) { // all fade in
-                        countryData += '<td>' + value.rank + '.' + '</td>';
-                        countryData += '<td id= "countryIncreases">' + key + '</td>';
-                        countryData += '<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
-                        // popNowPlusFive
-                    } else if (value.popNow < value.popNowPlusFive) { // all fade out
-                        countryData += '<td>' + value.rank + '.' + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
+                    if (value.popNow < value.popNowPlusFour) { // all fade in
+                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
+                        countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
+                    } else if (value.popNow > value.popNowMinusSecond) { // all fade out
+                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
+                        countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
+                    } else if (value.popNow > value.popNowPlusFour) { // japan fade in
+                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
+                        countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
                     } else if (value.popNow < value.popNowMinusSecond) { // japan fade out
-                        countryData += '<td>' + value.rank + '.' + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
-                    } else if (value.popNow > value.popNowPlusFive) { // japan fade in
-                        countryData += '<td>' + value.rank + '.' + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + key + '</td>';
-                        countryData += '<<td id= "countryIncreases">' + value.popNow.toLocaleString() + '</td>';
+                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
+                        countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
                     } else {
-                        countryData += '<td>' + value.rank + '.' + '</td>';
+                        countryData += '<td>' + value.rank + '</td>';
                         countryData += '<td>' + key + '</td>';
                         countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                     }
-
                     countryData += '</tr>';
-
-                    // var table = document.getElementById("topCountries")
-                    // for (var i = 0, cell; cell = table.cells[i]; i++) {
-                    // if (value.popNow > value.popNowMinusSecond) {
-                    //     function changeElement() {
-                    //         countryData += '<td style="background-color: yellow;">' + key + '</td>';
-                    //         // var el = document.getElementsByTagName('td');
-                    //         // el.style.color = "red";
-                    //         // el.style.fontSize = "15px";
-                    //         // el.style.backgroundColor = "White";
-                    //     }
-                    //     changeElement()
-                    //     console.log(key, value.popNow)
-                    // }
-
                 })
 
                 document.getElementById("topCountries").innerHTML = countryData;
@@ -86,9 +71,9 @@ $(document).ready(function() {
     };
 });
 
+//////////////// LEFT ALL COUNTRIES
 
-
-var intervalID = setInterval(update_country_pop, 1000);
+var intervalID = setInterval(update_country_pop, 2000);
 
 function update_country_pop() {
     $.getJSON('http://127.0.0.1:5000' + '/_allCountries',
@@ -96,40 +81,64 @@ function update_country_pop() {
             var countryData = '';
             $.each(data, function(key, value) {
                 countryData += '<tr>';
-                countryData += '<td>' + value.rank + '.' + '</td>';
-                countryData += '<td>' + key + '</td>';
-                countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
+                if (value.popNow < value.popNowPlusFour) { // all fade in
+                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
+                    countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
+                } else if (value.popNow > value.popNowMinusSecond) { // all fade out
+                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
+                    countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
+                } else if (value.popNow > value.popNowPlusFour) { // japan fade in
+                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
+                    countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
+                } else if (value.popNow < value.popNowMinusSecond) { // japan fade out
+                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
+                    countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
+                } else {
+                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + key + '</td>';
+                    countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
+                }
                 countryData += '</tr>';
-
             })
-
-
-            //$("tableCountries").animateHighlight("#dd0000", 1000);
             document.getElementById("tableCountries").innerHTML = countryData;
-
         });
 };
 
+
+//////////////// MIDDLE GRAPHS
+
 var images = [],
     x = -1;
-images[0] = "/static/popDistribution1950.jpg";
-images[1] = "/static/popDistribution1990.jpg";
-
+images[0] = "/static/totalPopulation.jpg";
+images[1] = "/static/lifeExpectancy.jpg";
+images[2] = "/static/DeathBirthProjections.jpg";
+images[3] = "/static/fertalityRate.jpg";
+images[4] = "/static/birthDeathRate.jpg";
+images[5] = "/static/populationOver80.jpg";
 
 function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;
     document.getElementById("img").src = images[x];
 }
 
-function displayPreviousImage() {
-    x = (x <= 0) ? images.length - 1 : x - 1;
-    document.getElementById("img").src = images[x];
-}
-
 function startTimer() {
-    setInterval(displayNextImage, 10000);
+    setInterval(displayNextImage, 20000);
 }
 
+
+
+
+
+
+
+
+
+
+// OLD Scripts
 
 
 
