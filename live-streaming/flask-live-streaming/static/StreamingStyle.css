@@ -1,63 +1,69 @@
-body {
-    background-color: white;
-}
-
-.totalWorldTitle {
-    color: rgb(197, 20, 20);
-    font-size: 2ex;
-    font-weight: bold;
-    /* background-color: rgb(116, 126, 143); */
-    position: absolute;
-    left: 550px;
-    text-align: center;
-    font-family: sans-serif;
-    /* border-radius: 30px; */
-    margin: 10px;
-    /* padding: 10px; */
-}
-
-.runnigCount {
-    color: black;
-    font-size: 8ex;
-    position: relative;
-    text-align: center;
-    font-family: sans-serif;
-    padding: 20px;
-    display: inline;
-    left: 520px;
-    top: 80px;
-}
-
-.allCountriesTitle {
-    color: black;
-    font-size: 2ex;
-    font-weight: bold;
-    position: absolute;
-    left: 26px;
-    text-align: center;
-    font-family: sans-serif;
-    /* border-radius: 30px; */
-    margin: 10px;
-    /* padding: 10px; */
-}
-
-.tableCountriesFrame {
-    height: 600px;
-    width: 420px;
-    overflow: hidden;
-    position: relative;
-    top: 20px;
-    bottom: 0px;
-}
-
-#tableCountries {
-    text-align: center;
-    font-family: sans-serif;
-    position: absolute;
-    margin: 2px;
-    padding: 20x;
-    text-align: center;
-    -webkit-transform: translateY(-80%);
+    body {
+        background-color: white;
+        font-family: galano grotesque, sans-serif;
+    }
+    
+    .totalWorldTitle {
+        color: blue;
+        font-size: 3ex;
+        font-weight: bold;
+        /* background-color: rgb(116, 126, 143); */
+        position: absolute;
+        left: 400px;
+        top: 0px;
+        text-align: center;
+        /* font-family: Cursive; */
+        /* sans-serif; */
+        /* border-radius: 30px; */
+        margin: 0px;
+        /* padding: 10px; */
+    }
+    
+    .runnigCount {
+        color: black;
+        font-size: 8ex;
+        position: relative;
+        text-align: center;
+        /* font-family: cursive; */
+        /* sans-serif; */
+        padding: 20px;
+        display: inline;
+        left: 470px;
+        top: 80px;
+    }
+    
+    .allCountriesTitle {
+        color: black;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        left: 26px;
+        text-align: center;
+        /* font-family: cursive; */
+        /* border-radius: 30px; */
+        margin: 10px;
+        /* padding: 10px; */
+    }
+    
+    .tableCountriesFrame {
+        height: 600px;
+        width: 420px;
+        overflow: hidden;
+        position: relative;
+        top: 20px;
+        bottom: 0px;
+    }
+    
+    #tableCountries {
+        text-align: center;
+        font-family: sans-serif;
+        position: absolute;
+        margin: 2px;
+        padding: 20x;
+        text-align: center;
+    }
+    /* Making the countries to SCROLL */
+    /* -webkit-transform: translateY(-80%);
     -webkit-animation: scroll-up 150s linear infinite;
 }
 
@@ -68,128 +74,126 @@ body {
     100% {
         -webkit-transform: translateY(0%);
     }
-}
-
-#tableCountries th,
-td {
-    padding: 3px;
-    text-align: left;
-    color: black;
-    font-size: 20px;
-    padding-left: 20px;
-    /* additional */
-    /* height: 100%; */
-    /* animation: scrolling 60s linear infinite; */
-    /* top: 1000px; */
-}
-
-.topCountriesTitle {
-    color: black;
-    font-size: 2ex;
-    font-weight: bold;
-    position: absolute;
-    left: 1000px;
-    text-align: center;
-    font-family: sans-serif;
-    /* border-radius: 30px; */
-    margin: 10px;
-    /* padding: 10px; */
-}
-
-.topCountriesFrame {
-    height: 700px;
-    width: 420px;
-    position: absolute;
-    top: 70px;
-    left: 970px;
-}
-
-#topCountries {
-    text-align: center;
-    font-family: sans-serif;
-    position: absolute;
-    margin: 2px;
-    padding: 25px;
-    text-align: center;
-}
-
-#topCountries td {
-    padding-left: 20px;
-    text-align: left;
-    color: black;
-    ;
-}
-
-#img {
-    position: absolute;
-    left: 390px;
-    top: 170px;
-    -webkit-animation: fadein2 5s;
-}
-
-@keyframes fadein2 {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
-}
-
-#countryIncreasesFadeIn {
-    -webkit-animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from {
+} */
+    
+    #tableCountries th,
+    td {
+        padding: 3px;
+        text-align: left;
         color: black;
+        font-size: 20px;
+        padding-left: 20px;
+        /* additional */
+        /* height: 100%; */
+        /* animation: scrolling 60s linear infinite; */
+        /* top: 1000px; */
     }
-    to {
-        color: green;
-    }
-}
-
-#countryIncreasesFadeOut {
-    -webkit-animation: fadeout 8s;
-}
-
-@keyframes fadeout {
-    from {
-        color: green;
-    }
-    to {
+    
+    .topCountriesTitle {
         color: black;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        left: 950px;
+        text-align: center;
+        /* font-family: cursive; */
+        /* border-radius: 30px; */
+        margin: 10px;
+        /* padding: 10px; */
     }
-}
-
-#japanIncreasesFadeIn {
-    -webkit-animation: fadein1 2s;
-}
-
-@keyframes fadein1 {
-    from {
+    
+    .topCountriesFrame {
+        height: 700px;
+        width: 420px;
+        position: absolute;
+        top: 70px;
+        left: 900px;
+    }
+    
+    #topCountries {
+        text-align: center;
+        font-family: sans-serif;
+        position: absolute;
+        margin: 2px;
+        padding: 25px;
+        text-align: center;
+    }
+    
+    #topCountries td {
+        padding-left: 20px;
+        text-align: left;
         color: black;
+        ;
     }
-    to {
-        color: red;
+    
+    #img {
+        position: absolute;
+        left: 390px;
+        top: 170px;
+        -webkit-animation: fadein2 5s;
     }
-}
-
-#japanIncreasesFadeOut {
-    -webkit-animation: fadeout1 8s;
-}
-
-@keyframes fadeout1 {
-    from {
-        color: red;
+    
+    @keyframes fadein2 {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+        }
     }
-    to {
-        color: black;
+    
+    #countryIncreasesFadeIn {
+        -webkit-animation: fadein 2s;
     }
-}
-
-
-/* 
+    
+    @keyframes fadein {
+        from {
+            color: black;
+        }
+        to {
+            color: green;
+        }
+    }
+    
+    #countryIncreasesFadeOut {
+        -webkit-animation: fadeout 8s;
+    }
+    
+    @keyframes fadeout {
+        from {
+            color: green;
+        }
+        to {
+            color: black;
+        }
+    }
+    
+    #japanIncreasesFadeIn {
+        -webkit-animation: fadein1 2s;
+    }
+    
+    @keyframes fadein1 {
+        from {
+            color: black;
+        }
+        to {
+            color: red;
+        }
+    }
+    
+    #japanIncreasesFadeOut {
+        -webkit-animation: fadeout1 8s;
+    }
+    
+    @keyframes fadeout1 {
+        from {
+            color: red;
+        }
+        to {
+            color: black;
+        }
+    }
+    /* 
 @keyframes fadeout {
     from {
         color: green;
@@ -198,9 +202,7 @@ td {
         color: black;
     }
 } */
-
-
-/* @keyframes scrolling {
+    /* @keyframes scrolling {
     0% {
         transform: translateX(80vw);
     }
@@ -208,9 +210,7 @@ td {
         transform: translateX(-100vw);
     }
 } */
-
-
-/* .tableCountriesFrame {
+    /* .tableCountriesFrame {
     width: 50vh;
     height: 50vh;
     background-color: green;
@@ -224,9 +224,7 @@ td {
     padding: 10px;
     box-sizing: border-box;
 } */
-
-
-/* #tableCountries {
+    /* #tableCountries {
     border: 1px solid black;
     border-collapse: collapse;
     left: 250px;
@@ -249,9 +247,7 @@ td {
         transform: translate(1000px, 100%);
     }
 } */
-
-
-/* 
+    /* 
 @keyframes scrolling {
     0% {
         transform: translateY(-80vw);
@@ -260,9 +256,7 @@ td {
         transform: translateY(-100vw);
     }
 } */
-
-
-/* 
+    /* 
 .news {
     width: 200vh;
     height: 20vh;

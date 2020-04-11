@@ -7,6 +7,7 @@ import sys
 import time
 
 
+
 # Import data
 data = pd.read_csv('static/countries2019-2020.csv')
 df = pd.DataFrame(data)

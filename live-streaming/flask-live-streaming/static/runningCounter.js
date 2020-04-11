@@ -71,7 +71,7 @@ $(document).ready(function() {
     };
 });
 
-//////////////// LEFT ALL COUNTRIES
+//////////////// LEFT ALL COUNTRIES <<<   scrolling   >>>
 
 var intervalID = setInterval(update_country_pop, 2000);
 
