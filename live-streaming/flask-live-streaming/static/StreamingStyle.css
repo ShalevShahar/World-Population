@@ -1,18 +1,18 @@
     body {
-        background-color: white;
-        font-family: galano grotesque, sans-serif;
+        background-color: black;
+        font-family: narkisim;
     }
     
     .totalWorldTitle {
-        color: blue;
-        font-size: 3ex;
+        color: #fdf4cc;
+        font-size: 15px;
         font-weight: bold;
         /* background-color: rgb(116, 126, 143); */
         position: absolute;
         left: 400px;
         top: 0px;
         text-align: center;
-        /* font-family: Cursive; */
+        /* font-family: Chiller; */
         /* sans-serif; */
         /* border-radius: 30px; */
         margin: 0px;
@@ -20,28 +20,29 @@
     }
     
     .runnigCount {
-        color: black;
-        font-size: 8ex;
+        color: #fdf4cc;
+        font-size: 5ex;
         position: relative;
         text-align: center;
         /* font-family: cursive; */
         /* sans-serif; */
         padding: 20px;
         display: inline;
-        left: 470px;
-        top: 80px;
+        left: 450px;
+        top: 60px;
     }
     
     .allCountriesTitle {
-        color: black;
+        color: #fdf4cc;
         font-size: 15px;
         font-weight: bold;
         position: absolute;
-        left: 26px;
-        text-align: center;
-        /* font-family: cursive; */
+        left: 20px;
+        top: 0px;
+        /* text-align: center; */
+        /* font-family: Chiller; */
         /* border-radius: 30px; */
-        margin: 10px;
+        /* margin: 10px; */
         /* padding: 10px; */
     }
     
@@ -49,18 +50,20 @@
         height: 600px;
         width: 420px;
         overflow: hidden;
+        table-layout: fixed;
         position: relative;
         top: 20px;
         bottom: 0px;
     }
     
     #tableCountries {
-        text-align: center;
-        font-family: sans-serif;
+        text-align: left;
+        /* font-family: chiller, sans-serif; */
         position: absolute;
         margin: 2px;
-        padding: 20x;
-        text-align: center;
+        /* padding: 20x; */
+        table-layout: fixed;
+        width: 370px;
     }
     /* Making the countries to SCROLL */
     /* -webkit-transform: translateY(-80%);
@@ -78,27 +81,47 @@
     
     #tableCountries th,
     td {
-        padding: 3px;
+        /* padding: 3px; */
+        /* table-layout: fixed; */
+        overflow: hidden;
         text-align: left;
-        color: black;
+        color: white;
         font-size: 20px;
-        padding-left: 20px;
+        /* padding-left: 0px; */
+        /* width: 5px; */
+        height: 10px;
         /* additional */
         /* height: 100%; */
         /* animation: scrolling 60s linear infinite; */
         /* top: 1000px; */
     }
     
+    #tableCountries td:nth-of-type(1) {
+        width: 13px;
+    }
+    /*Setting the width of column 1.*/
+    
+    #tableCountries td:nth-of-type(2) {
+        width: 63px;
+    }
+    /*Setting the width of column 2.*/
+    
+    #tableCountries td:nth-of-type(3) {
+        width: 40px;
+    }
+    /*Setting the width of column 3.*/
+    
     .topCountriesTitle {
-        color: black;
+        color: #fdf4cc;
         font-size: 15px;
         font-weight: bold;
         position: absolute;
         left: 950px;
+        top: 0px;
         text-align: center;
-        /* font-family: cursive; */
+        /* font-family: Chiller; */
         /* border-radius: 30px; */
-        margin: 10px;
+        /* margin: 10px; */
         /* padding: 10px; */
     }
     
@@ -112,7 +135,7 @@
     
     #topCountries {
         text-align: center;
-        font-family: sans-serif;
+        /* font-family: Narkisim; */
         position: absolute;
         margin: 2px;
         padding: 25px;
@@ -122,14 +145,14 @@
     #topCountries td {
         padding-left: 20px;
         text-align: left;
-        color: black;
+        color: white;
         ;
     }
     
     #img {
         position: absolute;
-        left: 390px;
-        top: 170px;
+        left: 345px;
+        top: 120px;
         -webkit-animation: fadein2 5s;
     }
     
@@ -148,7 +171,7 @@
     
     @keyframes fadein {
         from {
-            color: black;
+            color: white;
         }
         to {
             color: green;
@@ -164,7 +187,7 @@
             color: green;
         }
         to {
-            color: black;
+            color: white;
         }
     }
     
@@ -174,7 +197,7 @@
     
     @keyframes fadein1 {
         from {
-            color: black;
+            color: white;
         }
         to {
             color: red;
@@ -190,8 +213,14 @@
             color: red;
         }
         to {
-            color: black;
+            color: white;
         }
+    }
+    
+    #logo {
+        position: absolute;
+        left: 1050px;
+        top: 546px;
     }
     /* 
 @keyframes fadeout {

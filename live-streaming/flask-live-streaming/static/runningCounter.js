@@ -5,8 +5,8 @@ async function currentPopCalc() {
     const response = await fetch('/static/countries2019-2020.csv');
     const data = await response.text();
     //splitting and slicing the data so it will include only the total world population.
-    const pop2019 = data.split('\n').slice(236)[0].split(',')[1];
-    const pop2020 = data.split('\n').slice(236)[0].split(',')[2];
+    const pop2019 = data.split('\n').slice(235)[0].split(',')[1];
+    const pop2020 = data.split('\n').slice(235)[0].split(',')[2];
     //gap of the population between 2020 and 2019
     const gapPop2020Pop2019 = (parseFloat(pop2020) - parseFloat(pop2019))
         //epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
@@ -113,12 +113,12 @@ function update_country_pop() {
 
 var images = [],
     x = -1;
-images[0] = "/static/totalPopulation.jpg";
-images[1] = "/static/lifeExpectancy.jpg";
-images[2] = "/static/DeathBirthProjections.jpg";
-images[3] = "/static/fertalityRate.jpg";
-images[4] = "/static/birthDeathRate.jpg";
-images[5] = "/static/populationOver80.jpg";
+images[0] = "/static/b_70_world.png";
+images[1] = "/static/b_next_world .png";
+images[2] = "/static/b_70_all.png";
+images[3] = "/static/b_nex_all.png";
+// images[4] = "/static/birthDeathRate.jpg";
+// images[5] = "/static/populationOver80.jpg";
 
 function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;

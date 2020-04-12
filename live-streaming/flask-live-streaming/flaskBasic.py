@@ -11,7 +11,7 @@ import time
 # Import data
 data = pd.read_csv('static/countries2019-2020.csv')
 df = pd.DataFrame(data)
-df = df[0:235] #remove the last row which is the total world
+df = df[0:234] #remove the last row which is the total world
  
 # Global variables
 # epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
@@ -31,11 +31,12 @@ df['popRate'] = df['popGap'] / timeGap20192020
 
 # APP SERVER + connection to HTML
 app = Flask(__name__)
-
+script_start_time = time.time()
 
 @app.route('/_allCountries', methods=['GET'])
 def allCountries():
         dateNow = time.time()
+        time_from_script_start = int(dateNow - script_start_time)
         timePassed = (int(dateNow) - timeJuly2019)
         df['popNow'] =(df['pop2019'] + df['popRate'] * timePassed).astype(int)
         df1 = df.sort_values(axis=0, ascending =False, by='popNow' )
@@ -45,6 +46,9 @@ def allCountries():
         df1['popNowMinusSecond'] =(df1['pop2019'] + df1['popRate'] * timePassedMinusOne).astype(int)
         df1['popNowPlusFour'] =(df1['pop2019'] + df1['popRate'] * timePassedPlusFour).astype(int)
         df2 = df1.set_index('Location').loc[:, ['rank','popNow','popNowPlusFour','popNowMinusSecond']]
+        #Filtering to send only 20 each time, excluding the first 20
+        visualize_from_row = (11-((time_from_script_start // 10)%11))  * 20
+        df2 = df2.iloc[visualize_from_row : visualize_from_row + 20, :]
         allCountries = df2.to_json(orient='index')
         return  allCountries     
     
