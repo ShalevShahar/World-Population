@@ -124,10 +124,21 @@ function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;
     document.getElementById("img").src = images[x];
 }
+//  $("#img").fadeOut(3000)
 
-function startTimer() {
-    setInterval(displayNextImage, 20000);
-}
+//  $("#img").fadeIn(3000)
+var intervalID3 = setInterval(displayNextImage, 30000)
+    // var intervalID4 = setInterval(function() {
+    //     $("#img").fadeToggle("fast", "linear");
+    // }, 5000);
+
+// function startTimer() {
+//     // $("#img").fadeIn(3000);
+//     setInterval(displayNextImage, 5000);
+//     setInterval(function() {
+//         $("#img").fadeToggle('fast');
+//     }, 1500);
+// }
 
 
 var intervalID2 = setInterval(currentTime, 1000);
@@ -146,6 +157,10 @@ function currentTime() {
     document.getElementById("NewDelhi").innerHTML = NewDelhi
     document.getElementById("Moscow").innerHTML = Moscow
 }
+
+
+
+
 
 
 // OLD Scripts
