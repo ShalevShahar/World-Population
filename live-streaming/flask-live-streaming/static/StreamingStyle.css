@@ -219,9 +219,65 @@
     
     #logo {
         position: absolute;
-        left: 1050px;
+        left: 1150px;
         top: 546px;
     }
+    
+    .dateTimeFrame {
+        position: absolute;
+        left: 20px;
+        top: 546px;
+    }
+    
+    #dateTimeData {
+        text-align: left;
+        /* position: absolute;
+        margin: 2px;
+        padding: 25px; */
+    }
+    
+    #dateTimeData td {
+        padding-left: 22px;
+        text-align: left;
+        /* overflow: hidden; */
+        color: #fdf4cc;
+        ;
+    }
+    /* #dateTimeData td:nth-of-type(1) {
+        width: 80px;
+    }
+    
+    #dateTimeData td:nth-of-type(2) {
+        width: 170px;
+    }
+    
+    #dateTimeData td:nth-of-type(4) {
+        width: 130px;
+    }
+    
+    #dateTimeData td:nth-of-type(5) {
+        width: 70px;
+    }
+    
+    #dateTimeData td:nth-of-type(6) {
+        width: 130px;
+    }
+    
+    #dateTimeData td:nth-of-type(7) {
+        width: 130px;
+    }
+    
+    #dateTimeData td:nth-of-type(8) {
+        width: 130px;
+    }
+    
+    #dateTimeData td:nth-of-type(9) {
+        width: 130px;
+    }
+    
+    #dateTimeData td:nth-of-type(10) {
+        width: 100px;
+    } */
     /* 
 @keyframes fadeout {
     from {

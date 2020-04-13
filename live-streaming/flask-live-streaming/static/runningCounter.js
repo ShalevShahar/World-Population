@@ -130,12 +130,22 @@ function startTimer() {
 }
 
 
+var intervalID2 = setInterval(currentTime, 1000);
 
-
-
-
-
-
+function currentTime() {
+    var London = 'London - ' + new Date().toLocaleTimeString("en-GB", { weekday: 'short', timeZone: "Europe/London" })
+    var LondonDate = new Date().toLocaleDateString("en-GB", { year: 'numeric', day: '2-digit', month: 'short', timeZone: "Europe/London" })
+    var NewYork = 'New York - ' + new Date().toLocaleTimeString("en-GB", { weekday: 'short', timeZone: "America/New_York" })
+    var Tokyo = 'Tokyo - ' + new Date().toLocaleTimeString("en-GB", { weekday: 'short', timeZone: "Asia/Tokyo" })
+    var NewDelhi = 'New-Delhi - ' + new Date().toLocaleTimeString("en-GB", { weekday: 'short', timeZone: "Asia/Calcutta" })
+    var Moscow = 'Moscow - ' + new Date().toLocaleTimeString("en-GB", { weekday: 'short', timeZone: "Europe/Moscow" })
+    document.getElementById("London").innerHTML = London
+    document.getElementById("LondonDate").innerHTML = LondonDate
+    document.getElementById("NewYork").innerHTML = NewYork
+    document.getElementById("Tokyo").innerHTML = Tokyo
+    document.getElementById("NewDelhi").innerHTML = NewDelhi
+    document.getElementById("Moscow").innerHTML = Moscow
+}
 
 
 // OLD Scripts
