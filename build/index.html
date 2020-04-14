@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Population page</title>
+    <link rel="stylesheet" href="/static/StreamingStyle.css">
+</head>
+
+<body>
+    <header>
+        <div class="totalWorldTitle">
+            <h1>Total World Population</h1>
+        </div>
+        <div class="allCountriesTitle">
+            <h1>Population by Country</h1>
+        </div>
+        <div class="topCountriesTitle">
+            <h1>Top 20 Countries</h1>
+        </div>
+    </header>
+    <div class="runnigCount" id="c">total world population</div>
+    <div class="tableCountriesFrame">
+        <table id="tableCountries" frame=void>
+        </table>
+    </div>
+    <div class="topCountriesFrame">
+        <table id="topCountries" frame=void>
+        </table>
+    </div>
+    <div>
+        <img id="img" src="/static/b_70_world.png" height="420" width="550" />
+    </div>
+    <div>
+        <img id="logo" src="/static/Mock_logo.png" height="80" width="80" />
+    </div>
+    <div class="dateTimeFrame">
+        <table id="dateTimeData" frame=void>
+            <tr>
+                <td id="LondonDate"></td>
+            </tr>
+            <tr>
+                <td id="London"></td>
+                <td id="NewYork"></td>
+                <td id="Tokyo"></td>
+                <td id="NewDelhi"></td>
+                <td id="Moscow"></td>
+            </tr>>
+
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/static/runningCounter.js"></script>
+</body>
+
+</html>
