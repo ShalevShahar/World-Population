@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import sys
 import time
+import os
 
 # Import data
 data = pd.read_csv('static/countries2019-2020.csv')
@@ -28,7 +29,7 @@ df['popRate'] = df['popGap'] / timeGap20192020
 
 
 # APP SERVER + connection to HTML
-app = Flask(__name__)
+app = Flask(__name__, root_path='counter-project')
 script_start_time = time.time()
 
 @app.route('/_allCountries', methods=['GET'])
