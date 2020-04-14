@@ -6,8 +6,6 @@ import numpy as np
 import sys
 import time
 
-
-
 # Import data
 data = pd.read_csv('static/countries2019-2020.csv')
 df = pd.DataFrame(data)
@@ -75,7 +73,7 @@ def topCountries():
 
 @app.route('/')
 def index():
-        return render_template('PopulationStreaming.html')
+        return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)       
