@@ -4,7 +4,7 @@
     }
     
     .totalWorldTitle {
-        color: #b6670c;
+        color: #fdf4cc;
         font-size: 18px;
         font-weight: bold;
         /* background-color: rgb(116, 126, 143); */
@@ -20,7 +20,7 @@
     }
     
     .runnigCount {
-        color: #b6670c;
+        color: rgb(35, 129, 35);
         font-size: 7ex;
         position: relative;
         text-align: center;
@@ -99,7 +99,7 @@
     
     #tableCountries td:nth-of-type(1) {
         width: 11px;
-        height: 24px;
+        height: 25px;
     }
     /*Setting the width of column 1.*/
     
@@ -155,7 +155,7 @@
     
     #topCountries td:nth-of-type(1) {
         width: 5px;
-        height: 24px;
+        height: 25px;
     }
     /*Setting the width of column 1.*/
     
@@ -236,12 +236,6 @@
         }
     }
     
-    #logo {
-        position: absolute;
-        left: 1150px;
-        top: 646px;
-    }
-    
     .dateTimeFrame {
         position: absolute;
         left: 0px;
@@ -254,14 +248,53 @@
         margin: 2px;
         padding: 25px; */
     }
-    
-    #dateTimeData td {
+    /* #dateTimeData td {
         padding-left: 15px;
         text-align: left;
-        /* overflow: hidden; */
         color: #fdf4cc;
         font-size: 20px;
-        ;
+    } */
+    
+    #London {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 20px;
+    }
+    
+    #NewYork {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 20px;
+    }
+    
+    #Tokyo {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 20px;
+    }
+    
+    #NewDelhi {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 20px;
+    }
+    
+    #Moscow {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 20px;
+    }
+    
+    #year {
+        padding-left: 15px;
+        text-align: left;
+        color: #fdf4cc;
+        font-size: 40px;
     }
     /* #dateTimeData td:nth-of-type(1) {
         width: 80px;

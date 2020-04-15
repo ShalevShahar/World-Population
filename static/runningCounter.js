@@ -145,13 +145,13 @@ var intervalID2 = setInterval(currentTime, 1000);
 
 function currentTime() {
     var London = 'London - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Europe/London" })
-    var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + ' ©'
+    var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
     var NewYork = 'New York - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "America/New_York" })
     var Tokyo = 'Tokyo - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Tokyo" })
-    var NewDelhi = 'New-Delhi - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Calcutta" })
+    var NewDelhi = 'New Delhi - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Calcutta" })
     var Moscow = 'Moscow - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Europe/Moscow" })
     document.getElementById("London").innerHTML = London
-    document.getElementById("year").innerHTML = LondonDate
+    document.getElementById("year").innerHTML = year
     document.getElementById("NewYork").innerHTML = NewYork
     document.getElementById("Tokyo").innerHTML = Tokyo
     document.getElementById("NewDelhi").innerHTML = NewDelhi
