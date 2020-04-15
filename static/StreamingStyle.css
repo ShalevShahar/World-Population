@@ -4,12 +4,12 @@
     }
     
     .totalWorldTitle {
-        color: #fdf4cc;
-        font-size: 15px;
+        color: #b6670c;
+        font-size: 18px;
         font-weight: bold;
         /* background-color: rgb(116, 126, 143); */
         position: absolute;
-        left: 370px;
+        left: 490px;
         top: 0px;
         text-align: center;
         /* font-family: Chiller; */
@@ -20,24 +20,24 @@
     }
     
     .runnigCount {
-        color: #fdf4cc;
-        font-size: 5ex;
+        color: #b6670c;
+        font-size: 7ex;
         position: relative;
         text-align: center;
         /* font-family: cursive; */
         /* sans-serif; */
-        padding: 20px;
+        /* padding: 20px; */
         display: inline;
-        left: 650px;
-        top: 0px;
+        left: 525px;
+        top: 70px;
     }
     
     .allCountriesTitle {
         color: #fdf4cc;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: bold;
         position: absolute;
-        left: 20px;
+        left: 15px;
         top: 0px;
         /* text-align: center; */
         /* font-family: Chiller; */
@@ -51,8 +51,9 @@
         width: 420px;
         overflow: hidden;
         table-layout: fixed;
-        position: relative;
-        top: 20px;
+        position: absolute;
+        top: 70px;
+        left: 10px;
         bottom: 0px;
     }
     
@@ -60,7 +61,7 @@
         text-align: left;
         /* font-family: chiller, sans-serif; */
         position: absolute;
-        margin: 2px;
+        /* margin: 10px; */
         /* padding: 20x; */
         table-layout: fixed;
         width: 370px;
@@ -86,10 +87,10 @@
         overflow: hidden;
         text-align: left;
         color: white;
-        font-size: 20px;
+        font-size: 24px;
         /* padding-left: 0px; */
         /* width: 5px; */
-        height: 10px;
+        /* height: 17px; */
         /* additional */
         /* height: 100%; */
         /* animation: scrolling 60s linear infinite; */
@@ -97,7 +98,8 @@
     }
     
     #tableCountries td:nth-of-type(1) {
-        width: 13px;
+        width: 11px;
+        height: 24px;
     }
     /*Setting the width of column 1.*/
     
@@ -113,10 +115,10 @@
     
     .topCountriesTitle {
         color: #fdf4cc;
-        font-size: 15px;
+        font-size: 18px;
         font-weight: bold;
         position: absolute;
-        left: 950px;
+        left: 965px;
         top: 0px;
         text-align: center;
         /* font-family: Chiller; */
@@ -126,33 +128,50 @@
     }
     
     .topCountriesFrame {
-        height: 700px;
+        height: 600px;
         width: 420px;
+        overflow: hidden;
+        table-layout: fixed;
         position: absolute;
         top: 70px;
-        left: 900px;
+        bottom: 0px;
+        left: 965px;
     }
     
     #topCountries {
-        text-align: center;
-        /* font-family: Narkisim; */
+        text-align: left;
         position: absolute;
-        margin: 2px;
-        padding: 25px;
-        text-align: center;
+        table-layout: fixed;
+        width: 370px;
     }
     
     #topCountries td {
-        padding-left: 20px;
         text-align: left;
         color: white;
+        overflow: hidden;
+        font-size: 24px;
         ;
+    }
+    
+    #topCountries td:nth-of-type(1) {
+        width: 5px;
+        height: 24px;
+    }
+    /*Setting the width of column 1.*/
+    
+    #topCountries td:nth-of-type(2) {
+        width: 28px;
+    }
+    /*Setting the width of column 2.*/
+    
+    #topCountries td:nth-of-type(3) {
+        width: 40px;
     }
     
     #img {
         position: absolute;
-        left: 345px;
-        top: 120px;
+        left: 355px;
+        top: 150px;
         -webkit-animation: fadein2 1s;
     }
     
@@ -220,13 +239,13 @@
     #logo {
         position: absolute;
         left: 1150px;
-        top: 546px;
+        top: 646px;
     }
     
     .dateTimeFrame {
         position: absolute;
-        left: 20px;
-        top: 546px;
+        left: 0px;
+        top: 646px;
     }
     
     #dateTimeData {
@@ -237,11 +256,11 @@
     }
     
     #dateTimeData td {
-        padding-left: 20px;
+        padding-left: 15px;
         text-align: left;
         /* overflow: hidden; */
         color: #fdf4cc;
-        font-size: 16px;
+        font-size: 20px;
         ;
     }
     /* #dateTimeData td:nth-of-type(1) {
