@@ -114,7 +114,7 @@ function update_country_pop() {
 var images = [],
     x = -1;
 images[0] = "/static/b_70_world.png";
-images[1] = "/static/b_next_world .png";
+images[1] = "/static/b_next_world.png";
 images[2] = "/static/b_70_all.png";
 images[3] = "/static/b_nex_all.png";
 // images[4] = "/static/birthDeathRate.jpg";

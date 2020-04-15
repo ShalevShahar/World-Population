@@ -21,15 +21,16 @@
     
     .runnigCount {
         color: rgb(35, 129, 35);
-        font-size: 7ex;
+        font-size: 9ex;
         position: relative;
         text-align: center;
         /* font-family: cursive; */
         /* sans-serif; */
         /* padding: 20px; */
         display: inline;
-        left: 525px;
-        top: 70px;
+        left: 480px;
+        top: 85px;
+        ;
     }
     
     .allCountriesTitle {
@@ -170,8 +171,8 @@
     
     #img {
         position: absolute;
-        left: 355px;
-        top: 150px;
+        left: 375px;
+        top: 200px;
         -webkit-animation: fadein2 1s;
     }
     
