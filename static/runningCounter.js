@@ -115,7 +115,7 @@ var images = [],
     x = -1;
 images[0] = "/static/b_70_world.png";
 images[1] = "/static/b_next_world.png";
-images[2] = "/static/b_70_all.png";
+images[2] = "/static/aa.png";
 images[3] = "/static/b_nex_all.png";
 // images[4] = "/static/birthDeathRate.jpg";
 // images[5] = "/static/populationOver80.jpg";
@@ -127,7 +127,7 @@ function displayNextImage() {
 //  $("#img").fadeOut(3000)
 
 //  $("#img").fadeIn(3000)
-var intervalID3 = setInterval(displayNextImage, 30000)
+var intervalID3 = setInterval(displayNextImage, 20000)
     // var intervalID4 = setInterval(function() {
     //     $("#img").fadeToggle("fast", "linear");
     // }, 5000);
