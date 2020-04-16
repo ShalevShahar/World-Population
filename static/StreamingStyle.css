@@ -48,14 +48,13 @@
     }
     
     .tableCountriesFrame {
-        height: 600px;
+        height: 570px;
         width: 420px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
         top: 70px;
         left: 10px;
-        bottom: 0px;
     }
     
     #tableCountries {
@@ -88,7 +87,7 @@
         overflow: hidden;
         text-align: left;
         color: white;
-        font-size: 24px;
+        font-size: 22px;
         /* padding-left: 0px; */
         /* width: 5px; */
         /* height: 17px; */
@@ -100,7 +99,7 @@
     
     #tableCountries td:nth-of-type(1) {
         width: 11px;
-        height: 23px;
+        height: 16px;
     }
     /*Setting the width of column 1.*/
     
@@ -129,13 +128,12 @@
     }
     
     .topCountriesFrame {
-        height: 600px;
+        height: 570px;
         width: 420px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
         top: 70px;
-        bottom: 0px;
         left: 945px;
     }
     
@@ -150,13 +148,13 @@
         text-align: left;
         color: white;
         overflow: hidden;
-        font-size: 24px;
+        font-size: 22px;
         ;
     }
     
     #topCountries td:nth-of-type(1) {
         width: 5px;
-        height: 23px;
+        height: 2px;
     }
     /*Setting the width of column 1.*/
     
