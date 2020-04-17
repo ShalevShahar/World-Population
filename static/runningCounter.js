@@ -41,19 +41,19 @@ $(document).ready(function() {
                 var countryData = '';
                 $.each(data, function(key, value) {
                     countryData += '<tr>';
-                    if (value.popNow < value.popNowPlusFour) { // all fade in
+                    if (value.popNow < value.timePassedPlus2) { // all fade in
                         countryData += '<td>' + value.rank + '</td>';
                         countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
                         countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
-                    } else if (value.popNow > value.popNowMinusSecond) { // all fade out
+                    } else if (value.popNow > value.popNowMinus2) { // all fade out
                         countryData += '<td>' + value.rank + '</td>';
                         countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
                         countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
-                    } else if (value.popNow > value.popNowPlusFour) { // japan fade in
+                    } else if (value.popNow > value.timePassedPlus2) { // japan fade in
                         countryData += '<td>' + value.rank + '</td>';
                         countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
                         countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
-                    } else if (value.popNow < value.popNowMinusSecond) { // japan fade out
+                    } else if (value.popNow < value.popNowMinus2) { // japan fade out
                         countryData += '<td>' + value.rank + '</td>';
                         countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
                         countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
@@ -71,7 +71,7 @@ $(document).ready(function() {
     };
 });
 
-//////////////// LEFT ALL COUNTRIES <<<   scrolling   >>>
+//////////////// LEFT ALL COUNTRIES
 
 var intervalID = setInterval(update_country_pop, 2000);
 
@@ -81,19 +81,19 @@ function update_country_pop() {
             var countryData = '';
             $.each(data, function(key, value) {
                 countryData += '<tr>';
-                if (value.popNow < value.popNowPlusFour) { // all fade in
+                if (value.popNow < value.timePassedPlus2) { // all fade in
                     countryData += '<td>' + value.rank + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
-                } else if (value.popNow > value.popNowMinusSecond) { // all fade out
+                } else if (value.popNow > value.popNowMinus2) { // all fade out
                     countryData += '<td>' + value.rank + '</td>';
                     countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
                     countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
-                } else if (value.popNow > value.popNowPlusFour) { // japan fade in
+                } else if (value.popNow > value.timePassedPlus2) { // japan fade in
                     countryData += '<td>' + value.rank + '</td>';
                     countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
                     countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
-                } else if (value.popNow < value.popNowMinusSecond) { // japan fade out
+                } else if (value.popNow < value.popNowMinus2) { // japan fade out
                     countryData += '<td>' + value.rank + '</td>';
                     countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
                     countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
@@ -117,21 +117,20 @@ images[0] = "/static/b_70_world.png";
 images[1] = "/static/b_next_world.png";
 images[2] = "/static/aa.png";
 images[3] = "/static/b_nex_all.png";
-// images[4] = "/static/birthDeathRate.jpg";
-// images[5] = "/static/populationOver80.jpg";
 
 function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;
     document.getElementById("img").src = images[x];
 }
-//  $("#img").fadeOut(3000)
-
-//  $("#img").fadeIn(3000)
 var intervalID3 = setInterval(displayNextImage, 20000)
-    // var intervalID4 = setInterval(function() {
-    //     $("#img").fadeToggle("fast", "linear");
-    // }, 5000);
 
+////// Trails to fade in new picture. Did not work out. 
+
+//  $("#img").fadeOut(3000)
+//  $("#img").fadeIn(3000)
+// var intervalID4 = setInterval(function() {
+//     $("#img").fadeToggle("fast", "linear");
+// }, 5000);
 // function startTimer() {
 //     // $("#img").fadeIn(3000);
 //     setInterval(displayNextImage, 5000);
@@ -140,6 +139,7 @@ var intervalID3 = setInterval(displayNextImage, 20000)
 //     }, 1500);
 // }
 
+//////////////   BOTTON TIMES IN CITIES
 
 var intervalID2 = setInterval(currentTime, 1000);
 
@@ -160,22 +160,11 @@ function currentTime() {
 
 
 
-
-
-
 // OLD Scripts
 
 
-
-// var intervalID = setInterval(update_world_pop, 1000);
-
-// function update_world_pop() {
-//     $.getJSON('http://127.0.0.1:5000' + '/_china',
-//         function(data) {
-//             $('#china').text(data.china);
-//             document.getElementById("china").innerHTML;
-//         });
-// };
+/////attampts to present the left graph of all countries from this JS file. It did not work out because the loading of the 
+//CSV file were too slow. The solution was to send the data as JSON file from the Python Flask.
 
 //html += "</tr></table>";
 

@@ -7,16 +7,11 @@
         color: #fdf4cc;
         font-size: 18px;
         font-weight: bold;
-        /* background-color: rgb(116, 126, 143); */
         position: absolute;
         left: 490px;
         top: 0px;
         text-align: center;
-        /* font-family: Chiller; */
-        /* sans-serif; */
-        /* border-radius: 30px; */
         margin: 0px;
-        /* padding: 10px; */
     }
     
     .runnigCount {
@@ -24,9 +19,6 @@
         font-size: 9ex;
         position: relative;
         text-align: center;
-        /* font-family: cursive; */
-        /* sans-serif; */
-        /* padding: 20px; */
         display: inline;
         left: 480px;
         top: 85px;
@@ -40,11 +32,6 @@
         position: absolute;
         left: 15px;
         top: 0px;
-        /* text-align: center; */
-        /* font-family: Chiller; */
-        /* border-radius: 30px; */
-        /* margin: 10px; */
-        /* padding: 10px; */
     }
     
     .tableCountriesFrame {
@@ -59,42 +46,18 @@
     
     #tableCountries {
         text-align: left;
-        /* font-family: chiller, sans-serif; */
         position: absolute;
-        /* margin: 10px; */
-        /* padding: 20x; */
         table-layout: fixed;
         width: 370px;
     }
-    /* Making the countries to SCROLL */
-    /* -webkit-transform: translateY(-80%);
-    -webkit-animation: scroll-up 150s linear infinite;
-}
-
-@-webkit-keyframes scroll-up {
-    0% {
-        -webkit-transform: translateY(-80%);
-    }
-    100% {
-        -webkit-transform: translateY(0%);
-    }
-} */
     
     #tableCountries th,
     td {
-        /* padding: 3px; */
-        /* table-layout: fixed; */
         overflow: hidden;
         text-align: left;
         color: white;
         font-size: 22px;
-        /* padding-left: 0px; */
-        /* width: 5px; */
-        /* height: 17px; */
-        /* additional */
-        /* height: 100%; */
         /* animation: scrolling 60s linear infinite; */
-        /* top: 1000px; */
     }
     
     #tableCountries td:nth-of-type(1) {
@@ -121,10 +84,6 @@
         left: 945px;
         top: 0px;
         text-align: center;
-        /* font-family: Chiller; */
-        /* border-radius: 30px; */
-        /* margin: 10px; */
-        /* padding: 10px; */
     }
     
     .topCountriesFrame {
@@ -166,6 +125,7 @@
     #topCountries td:nth-of-type(3) {
         width: 40px;
     }
+    /* The img fade in animation works only for the first img... */
     
     #img {
         position: absolute;
@@ -243,16 +203,7 @@
     
     #dateTimeData {
         text-align: left;
-        /* position: absolute;
-        margin: 2px;
-        padding: 25px; */
     }
-    /* #dateTimeData td {
-        padding-left: 15px;
-        text-align: left;
-        color: #fdf4cc;
-        font-size: 20px;
-    } */
     
     #London {
         padding-left: 13px;
@@ -295,145 +246,17 @@
         color: #fdf4cc;
         font-size: 40px;
     }
-    /* #dateTimeData td:nth-of-type(1) {
-        width: 80px;
-    }
-    
-    #dateTimeData td:nth-of-type(2) {
-        width: 170px;
-    }
-    
-    #dateTimeData td:nth-of-type(4) {
-        width: 130px;
-    }
-    
-    #dateTimeData td:nth-of-type(5) {
-        width: 70px;
-    }
-    
-    #dateTimeData td:nth-of-type(6) {
-        width: 130px;
-    }
-    
-    #dateTimeData td:nth-of-type(7) {
-        width: 130px;
-    }
-    
-    #dateTimeData td:nth-of-type(8) {
-        width: 130px;
-    }
-    
-    #dateTimeData td:nth-of-type(9) {
-        width: 130px;
-    }
-    
-    #dateTimeData td:nth-of-type(10) {
-        width: 100px;
-    } */
-    /* 
-@keyframes fadeout {
-    from {
-        color: green;
-    }
-    to {
-        color: black;
-    }
-} */
-    /* @keyframes scrolling {
+    /* OLDER VERSION  - it should come after the #tableCountries tag to make the table scroll */
+    /* Making the countries to SCROLL */
+    /* -webkit-transform: translateY(-80%);
+    -webkit-animation: scroll-up 150s linear infinite;
+}
+
+@-webkit-keyframes scroll-up {
     0% {
-        transform: translateX(80vw);
+        -webkit-transform: translateY(-80%);
     }
     100% {
-        transform: translateX(-100vw);
+        -webkit-transform: translateY(0%);
     }
-} */
-    /* .tableCountriesFrame {
-    width: 50vh;
-    height: 50vh;
-    background-color: green;
-    position: absolute;
-    color: tomato;
-    left: 4%;
-    display: flex;
-    justify-content: center;
-    top: 150px;
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-} */
-    /* #tableCountries {
-    border: 1px solid black;
-    border-collapse: collapse;
-    left: 250px;
-    top: 100px;
-    height: 100%;
-    color: blue;
-    text-align: center;
-    font-family: sans-serif;
-    margin: 1px;
-    padding: 10px;
-    background-color: #f1f1c1;
-    animation: scrolling 60s linear infinite;
-}
-
-@keyframes scrolling {
-    from {
-        transform: translate(0, 0%);
-    }
-    to {
-        transform: translate(1000px, 100%);
-    }
-} */
-    /* 
-@keyframes scrolling {
-    0% {
-        transform: translateY(-80vw);
-    }
-    100% {
-        transform: translateY(-100vw);
-    }
-} */
-    /* 
-.news {
-    width: 200vh;
-    height: 20vh;
-    background-color: black;
-    position: relative;
-    color: tomato;
-    overflow: hidden;
-    left: 4%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 500px;
-    margin: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.News-content {
-    list-style: none;
-    height: 100%;
-    display: flex;
-    animation: scrolling 10s linear infinite;
-    top: 1000px;
-}
-
-@keyframes scrolling {
-    0% {
-        transform: translateX(80vw);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
-
-.News-content li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    flex-shrink: 0;
-    font-size: 5rem;
-    white-space: nowrap;
 } */
