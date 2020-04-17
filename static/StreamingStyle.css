@@ -241,10 +241,10 @@
     }
     
     #year {
-        padding-left: 13px;
+        padding-left: 23px;
         text-align: left;
         color: #fdf4cc;
-        font-size: 40px;
+        font-size: 18px;
     }
     /* OLDER VERSION  - it should come after the #tableCountries tag to make the table scroll */
     /* Making the countries to SCROLL */
