@@ -30,7 +30,7 @@
         font-size: 18px;
         font-weight: bold;
         position: absolute;
-        left: 15px;
+        left: 945px;
         top: 0px;
     }
     
@@ -41,14 +41,14 @@
         table-layout: fixed;
         position: absolute;
         top: 70px;
-        left: 10px;
+        left: 945px;
     }
     
     #tableCountries {
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 370px;
+        width: 390px;
     }
     
     #tableCountries th,
@@ -72,16 +72,20 @@
     /*Setting the width of column 2.*/
     
     #tableCountries td:nth-of-type(3) {
-        width: 40px;
+        width: 20px;
     }
     /*Setting the width of column 3.*/
     
+    #tableCountries td:nth-of-type(4) {
+        width: 10px;
+    }
+    
     .topCountriesTitle {
-        color: #fdf4cc;
+        color: #c75919;
         font-size: 18px;
         font-weight: bold;
         position: absolute;
-        left: 945px;
+        left: 15px;
         top: 0px;
         text-align: center;
     }
@@ -93,7 +97,7 @@
         table-layout: fixed;
         position: absolute;
         top: 70px;
-        left: 945px;
+        left: 10px;
     }
     
     #topCountries {
@@ -123,8 +127,13 @@
     /*Setting the width of column 2.*/
     
     #topCountries td:nth-of-type(3) {
-        width: 40px;
+        width: 20px;
     }
+    
+    #topCountries td:nth-of-type(4) {
+        width: 10px;
+    }
+    /* Th
     /* The img fade in animation works only for the first img... */
     
     #img {
@@ -157,7 +166,7 @@
     }
     
     #countryIncreasesFadeOut {
-        -webkit-animation: fadeout 8s;
+        -webkit-animation: fadeout 3s;
     }
     
     @keyframes fadeout {
