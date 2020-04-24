@@ -37,7 +37,7 @@ def allCountries():
         df1['popNowPlus2'] =(df1['pop2019'] + df1['popRate'] * timePassedPlus2).astype(int)
         df2 = df1.set_index('Location').loc[:, ['rank','popNow','popNowPlus2','popNowMinus2']]
         #Filtering to send only 20 each time, excluding the first 20
-        visualize_from_row = 20 #(11-((time_from_script_start // 10)%11))  * 20
+        visualize_from_row = (11-((time_from_script_start // 10)%11))  * 20
         df2 = df2.iloc[visualize_from_row : visualize_from_row + 20, :]
         allCountries = df2.to_json(orient='index')
         return  allCountries     
