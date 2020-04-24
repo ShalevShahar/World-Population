@@ -42,27 +42,27 @@ $(document).ready(function() {
                 $.each(data, function(key, value) {
                     countryData += '<tr>';
                     if (value.popNow < value.popNowPlus2) { // all fade in
-                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
                         countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
                         countryData += '<td id= "countryIncreasesFadeIn">' + '+1' + '</td>';
                     } else if (value.popNow > value.popNowMinus2) { // all fade out
-                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
                         countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
                         countryData += '<td id= "countryIncreasesFadeOut">' + '' + '</td>';
                     } else if (value.popNow > value.popNowPlus2) { // japan fade in
-                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
                         countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
                         countryData += '<td id= "japanIncreasesFadeIn">' + '-1' + '</td>';
                     } else if (value.popNow < value.popNowMinus2) { // japan fade out
-                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
                         countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
                         countryData += '<td id= "japanIncreasesFadeOut">' + '' + '</td>';
                     } else {
-                        countryData += '<td>' + value.rank + '</td>';
+                        countryData += '<td>' + value.rank + '.' + '</td>';
                         countryData += '<td>' + key + '</td>';
                         countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                         countryData += '<td>' + '' + '</td>';
@@ -87,27 +87,27 @@ function update_country_pop() {
             $.each(data, function(key, value) {
                 countryData += '<tr>';
                 if (value.popNow < value.popNowPlus2) { // all fade in
-                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + value.rank + '.' + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + '+1' + '</td>';
                 } else if (value.popNow > value.popNowMinus2) { // all fade out
-                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + value.rank + '.' + '</td>';
                     countryData += '<td id= "countryIncreasesFadeOut">' + key + '</td>';
                     countryData += '<td id= "countryIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + '' + '</td>';
                 } else if (value.popNow > value.popNowPlus2) { // japan fade in
-                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + value.rank + '.' + '</td>';
                     countryData += '<td id= "japanIncreasesFadeIn">' + key + '</td>';
                     countryData += '<td id= "japanIncreasesFadeIn">' + value.popNow.toLocaleString() + '</td>';
                     countryData += '<td id= "japanIncreasesFadeIn">' + '-1' + '</td>';
                 } else if (value.popNow < value.popNowMinus2) { // japan fade out
-                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + value.rank + '.' + '</td>';
                     countryData += '<td id= "japanIncreasesFadeOut">' + key + '</td>';
                     countryData += '<td id= "japanIncreasesFadeOut">' + value.popNow.toLocaleString() + '</td>';
                     countryData += '<td id= "japanIncreasesFadeOut">' + '' + '</td>';
                 } else {
-                    countryData += '<td>' + value.rank + '</td>';
+                    countryData += '<td>' + value.rank + '.' + '</td>';
                     countryData += '<td>' + key + '</td>';
                     countryData += '<td>' + value.popNow.toLocaleString() + '</td>';
                     countryData += '<td id= "countryIncreasesFadeIn">' + '' + '</td>';
