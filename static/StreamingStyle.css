@@ -6,6 +6,18 @@
         /* font-family: 'kalam'; */
     }
     
+    #imgTitle {
+        color: #869fbd;
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        left: 460px;
+        top: 180px;
+        text-align: center;
+        margin: 0px;
+        font-family: 'kalam';
+    }
+    
     .totalWorldTitle {
         color: #869fbd;
         font-size: 20px;
@@ -158,7 +170,7 @@
     #img {
         position: absolute;
         left: 365px;
-        top: 200px;
+        top: 250px;
         -webkit-animation: fadein2 1s;
     }
     

@@ -119,20 +119,29 @@ function update_country_pop() {
 };
 
 
-//////////////// MIDDLE GRAPHS
+//////////////// MIDDLE GRAPHS + MIDDLE TITLE
 
 var images = [],
-    x = -1;
-images[0] = "/static/b_70_world.png";
-images[1] = "/static/b_next_world.png";
-images[2] = "/static/aa.png";
-images[3] = "/static/b_nex_all.png";
+    x = -1,
+    title = [];
+
+images[0] = "/static/trailGIF.gif";
+images[1] = "/static/b_70_world.png";
+// images[1] = "/static/b_next_world.png";
+// images[2] = "/static/aa.png";
+// images[3] = "/static/b_nex_all.png";
+title[0] = "Past 70 Years";
+title[1] = "shalom";
+title[2] = "kkuuu";
+title[3] = "asldkaskjdh";
+
 
 function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;
     document.getElementById("img").src = images[x];
+    document.getElementById("imgTitle").innerHTML = title[x];
 }
-var intervalID3 = setInterval(displayNextImage, 20000)
+var intervalID3 = setInterval(displayNextImage, 5000)
 
 ////// Trails to fade in new picture. Did not work out. 
 
