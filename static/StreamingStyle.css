@@ -11,8 +11,8 @@
         font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 460px;
-        top: 180px;
+        left: 540px;
+        top: 160px;
         text-align: center;
         margin: 0px;
         font-family: 'kalam';
@@ -40,7 +40,7 @@
         text-align: center;
         display: inline;
         left: 480px;
-        top: 85px;
+        top: 65px;
         font-family: 'kalam';
     }
     
@@ -170,7 +170,7 @@
     #img {
         position: absolute;
         left: 365px;
-        top: 250px;
+        top: 220px;
         -webkit-animation: fadein2 1s;
     }
     
