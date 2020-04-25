@@ -125,8 +125,8 @@ var images = [],
     x = -1,
     title = [];
 
-images[0] = "/static/trailGIF.gif";
-images[1] = "/static/b_70_world.png";
+images[0] = "/static/past70_all_40s_v6.gif";
+// images[1] = "/static/trailGIF.png";
 // images[1] = "/static/b_next_world.png";
 // images[2] = "/static/aa.png";
 // images[3] = "/static/b_nex_all.png";
@@ -141,7 +141,7 @@ function displayNextImage() {
     document.getElementById("img").src = images[x];
     document.getElementById("imgTitle").innerHTML = title[x];
 }
-var intervalID3 = setInterval(displayNextImage, 5000)
+var intervalID3 = setInterval(displayNextImage, 40000)
 
 ////// Trails to fade in new picture. Did not work out. 
 
