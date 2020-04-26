@@ -3,31 +3,32 @@
         /* background-color: black; */
         /* font-family: narkisim; */
         font-family: 'Malgun Gothic';
-        /* font-family: 'kalam'; */
+        /* font-family: 'Segoe Print'; */
     }
     
     #imgTitle {
         color: #869fbd;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         position: absolute;
         left: 540px;
         top: 160px;
         text-align: center;
         margin: 0px;
-        font-family: 'kalam';
+        /* font-family: 'Segoe Print'; */
+        font-family: 'Segoe Print';
     }
     
     .totalWorldTitle {
         color: #869fbd;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         position: absolute;
         left: 460px;
         top: 0px;
         text-align: center;
         margin: 0px;
-        font-family: 'kalam';
+        font-family: 'Segoe Print';
     }
     
     .runnigCount {
@@ -35,29 +36,29 @@
         /* color: #84ac27; */
         /* font-size: 9ex; */
         color: #a09684;
-        font-size: 7ex;
+        font-size: 5ex;
         position: relative;
         text-align: center;
         display: inline;
         left: 480px;
         top: 65px;
-        font-family: 'kalam';
+        font-family: 'Segoe Print';
     }
     
     .allCountriesTitle {
         /* color: #e9c72f; */
         color: #869fbd;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         position: absolute;
-        left: 945px;
+        left: 920px;
         top: 0px;
-        font-family: 'kalam';
+        font-family: 'Segoe Print';
     }
     
     .tableCountriesFrame {
         height: 570px;
-        width: 470px;
+        width: 430px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
@@ -69,7 +70,7 @@
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 470px;
+        width: 370px;
     }
     
     #tableCountries th,
@@ -77,12 +78,12 @@
         overflow: hidden;
         text-align: left;
         color: #a09684;
-        font-size: 21px;
+        font-size: 18px;
         /* animation: scrolling 60s linear infinite; */
     }
     
     #tableCountries td:nth-of-type(1) {
-        width: 6px;
+        width: 20px;
         height: 0px;
         text-align: right;
         /* margin: 5px 25px; */
@@ -90,19 +91,19 @@
     /*Setting the width of column 1.*/
     
     #tableCountries td:nth-of-type(2) {
-        width: 7px;
+        width: 60px;
         border-left: 8px solid rgb(30, 30, 30)
     }
     /*Setting the width of column 2.*/
     
     #tableCountries td:nth-of-type(3) {
-        width: 6px;
+        width: 50px;
         text-align: left;
     }
     /*Setting the width of column 3.*/
     
     #tableCountries td:nth-of-type(4) {
-        width: 1px;
+        width: 10px;
         text-align: left;
     }
     
@@ -110,18 +111,18 @@
         /* color: #c75919; */
         /* color: #9bca2c; */
         color: #869fbd;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: bold;
         position: absolute;
         left: 15px;
         top: 0px;
         text-align: center;
-        font-family: 'kalam';
+        font-family: 'Segoe Print';
     }
     
     .topCountriesFrame {
         height: 570px;
-        width: 420px;
+        width: 370px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
@@ -137,39 +138,39 @@
     }
     
     #topCountries td {
-        text-align: left;
+        /* text-align: left; */
         color: #a09684;
         overflow: hidden;
-        font-size: 21px;
-        border-spacing: 30px 0px
+        font-size: 18px;
+        /* border-spacing: 30px 0px */
     }
     
     #topCountries td:nth-of-type(1) {
-        width: 2px;
+        width: 1px;
         height: 0px;
         text-align: right;
     }
     /*Setting the width of column 1.*/
     
     #topCountries td:nth-of-type(2) {
-        border-left: 7px solid rgb(30, 30, 30);
-        width: 3px;
+        border-left: 4px solid rgb(30, 30, 30);
+        width: 2px;
     }
     /*Setting the width of column 2.*/
     
     #topCountries td:nth-of-type(3) {
-        width: 10px;
+        width: 6px;
     }
     
     #topCountries td:nth-of-type(4) {
-        width: 4px;
+        width: 2px;
     }
     /* Th
     /* The img fade in animation works only for the first img... */
     
     #img {
         position: absolute;
-        left: 365px;
+        left: 355px;
         top: 220px;
         -webkit-animation: fadein2 1s;
     }
