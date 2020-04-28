@@ -11,7 +11,7 @@
         font-size: 30px;
         font-weight: bold;
         position: absolute;
-        left: 540px;
+        left: 510px;
         top: 160px;
         text-align: center;
         margin: 0px;
@@ -24,7 +24,7 @@
         font-size: 15px;
         font-weight: bold;
         position: absolute;
-        left: 460px;
+        left: 440px;
         top: 0px;
         text-align: center;
         margin: 0px;
@@ -40,7 +40,7 @@
         position: relative;
         text-align: center;
         display: inline;
-        left: 480px;
+        left: 450px;
         top: 65px;
         font-family: 'Segoe Print';
     }
@@ -58,19 +58,19 @@
     
     .tableCountriesFrame {
         height: 570px;
-        width: 430px;
+        width: 340px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
         top: 80px;
-        left: 875px;
+        left: 920px;
     }
     
     #tableCountries {
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 370px;
+        width: 340px;
     }
     
     #tableCountries th,
@@ -83,7 +83,7 @@
     }
     
     #tableCountries td:nth-of-type(1) {
-        width: 20px;
+        width: 30px;
         height: 0px;
         text-align: right;
         /* margin: 5px 25px; */
@@ -91,19 +91,19 @@
     /*Setting the width of column 1.*/
     
     #tableCountries td:nth-of-type(2) {
-        width: 60px;
+        width: 140px;
         border-left: 8px solid rgb(30, 30, 30)
     }
     /*Setting the width of column 2.*/
     
     #tableCountries td:nth-of-type(3) {
-        width: 50px;
+        width: 80px;
         text-align: left;
     }
     /*Setting the width of column 3.*/
     
     #tableCountries td:nth-of-type(4) {
-        width: 10px;
+        width: 20px;
         text-align: left;
     }
     
@@ -114,7 +114,7 @@
         font-size: 15px;
         font-weight: bold;
         position: absolute;
-        left: 15px;
+        left: 25px;
         top: 0px;
         text-align: center;
         font-family: 'Segoe Print';
@@ -122,19 +122,19 @@
     
     .topCountriesFrame {
         height: 570px;
-        width: 370px;
+        width: 310px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
         top: 80px;
-        left: 0px;
+        left: 10px;
     }
     
     #topCountries {
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 370px;
+        width: 310px;
     }
     
     #topCountries td {
@@ -146,24 +146,24 @@
     }
     
     #topCountries td:nth-of-type(1) {
-        width: 1px;
+        width: 23px;
         height: 0px;
         text-align: right;
     }
     /*Setting the width of column 1.*/
     
     #topCountries td:nth-of-type(2) {
-        border-left: 4px solid rgb(30, 30, 30);
-        width: 2px;
+        border-left: 10px solid rgb(30, 30, 30);
+        width: 118px;
     }
     /*Setting the width of column 2.*/
     
     #topCountries td:nth-of-type(3) {
-        width: 6px;
+        width: 110px;
     }
     
     #topCountries td:nth-of-type(4) {
-        width: 2px;
+        width: 23px;
     }
     /* Th
     /* The img fade in animation works only for the first img... */
