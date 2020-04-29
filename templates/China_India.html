@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>China vs India</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='/static/China_India.css'>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='China_India.css') }}"> -->
+</head>
+
+<body>
+    <header>
+        <div class="chinaTitle">
+            <h1>China</h1>
+        </div>
+        <div>
+            <img id="chinaFlag" src="/static/China_India_photos/china-flag-small_500_333.png" height="66" width="100" />
+        </div>
+        <div class="indiaTitle">
+            <h1>India</h1>
+        </div>
+        <div>
+            <img id="indiaFlag" src="/static/China_India_photos/india-flag-small_500_333.png" height="66" width="100" />
+        </div>
+        <div class="graphTitle">
+            <h1>Graph Title</h1>
+        </div>
+        <div class="newsTitle">
+            <h1>News Title</h1>
+        </div>
+    </header>
+    <div class="popTable">
+        <table id="popTableID" frame=void>
+            <tr>
+                <td>Total</td>
+                <td>pop of China</td>
+                <td>pop of India</td>
+            </tr>
+            <tr>
+                <td>Male</td>
+                <td>Males of China</td>
+                <td>Males of India</td>
+            </tr>
+            <tr>
+                <td>Female</td>
+                <td>Females of China</td>
+                <td>Females of India</td>
+            </tr>
+            <tr>
+                <td>Net Migration This Year</td>
+                <td>Mig of China</td>
+                <td>Mig of India</td>
+            </tr>
+
+        </table>
+    </div>
+    <div class="indiaBiggest" id="i">India will become the largest country in 32342 (~6 years)</div>
+
+    <div>
+        <img id="graph" src="/static/last70_all_v7_45s.gif" height="410" width="535" />
+    </div>
+    <div id="news">
+        China has been the largest country in the world for the past 70 years
+    </div>
+    <div>
+        <img id="china_IMG" src="/static/China_India_photos/china_temp_photo.jpg" height="410" width="535" />
+    </div>
+    <div>
+        <img id="india_IMG" src="/static/China_India_photos/india_temp_photo.jpg" height="410" width="535" />
+    </div>
+
+    <div class="dateTimeFrame">
+        <table id="dateTimeData" frame=void>
+            <tr>
+                <td id="London"></td>
+                <td id="NewYork"></td>
+                <td id="Tokyo"></td>
+                <td id="NewDelhi"></td>
+                <td id="Moscow"></td>
+                <td id="year"></td>
+            </tr>>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- <script src="{{url_for('static', filename='/static/China_India.js')}}"></script> -->
+    <script src="/static/China_India.js"></script>
+</body>
+
+</html>

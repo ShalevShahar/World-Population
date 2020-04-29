@@ -1,0 +1,291 @@
+    body {
+        /* background-color: rgb(30, 30, 30); */
+        /* background-color: black; */
+        /* font-family: narkisim; */
+        font-family: 'Malgun Gothic';
+        /* font-family: 'Segoe Print'; */
+    }
+    
+    #imgTitle {
+        color: #869fbd;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        left: 510px;
+        top: 160px;
+        text-align: center;
+        margin: 0px;
+        /* font-family: 'Segoe Print'; */
+        font-family: 'Segoe Print';
+    }
+    
+    .totalWorldTitle {
+        color: #869fbd;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        left: 440px;
+        top: 0px;
+        text-align: center;
+        margin: 0px;
+        font-family: 'Segoe Print';
+    }
+    
+    .runnigCount {
+        /* color: rgb(35, 129, 35); */
+        /* color: #84ac27; */
+        /* font-size: 9ex; */
+        color: #a09684;
+        font-size: 5ex;
+        position: relative;
+        text-align: center;
+        display: inline;
+        left: 450px;
+        top: 65px;
+        font-family: 'Segoe Print';
+    }
+    
+    .allCountriesTitle {
+        /* color: #e9c72f; */
+        color: #869fbd;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        left: 920px;
+        top: 0px;
+        font-family: 'Segoe Print';
+    }
+    
+    .tableCountriesFrame {
+        height: 570px;
+        width: 340px;
+        overflow: hidden;
+        table-layout: fixed;
+        position: absolute;
+        top: 80px;
+        left: 920px;
+    }
+    
+    #tableCountries {
+        text-align: left;
+        position: absolute;
+        table-layout: fixed;
+        width: 340px;
+    }
+    
+    #tableCountries th,
+    td {
+        overflow: hidden;
+        text-align: left;
+        color: #a09684;
+        font-size: 18px;
+        /* animation: scrolling 60s linear infinite; */
+    }
+    
+    #tableCountries td:nth-of-type(1) {
+        width: 30px;
+        height: 0px;
+        text-align: right;
+        /* margin: 5px 25px; */
+    }
+    /*Setting the width of column 1.*/
+    
+    #tableCountries td:nth-of-type(2) {
+        width: 140px;
+        border-left: 8px solid rgb(30, 30, 30)
+    }
+    /*Setting the width of column 2.*/
+    
+    #tableCountries td:nth-of-type(3) {
+        width: 80px;
+        text-align: left;
+    }
+    /*Setting the width of column 3.*/
+    
+    #tableCountries td:nth-of-type(4) {
+        width: 20px;
+        text-align: left;
+    }
+    
+    .topCountriesTitle {
+        /* color: #c75919; */
+        /* color: #9bca2c; */
+        color: #869fbd;
+        font-size: 15px;
+        font-weight: bold;
+        position: absolute;
+        left: 25px;
+        top: 0px;
+        text-align: center;
+        font-family: 'Segoe Print';
+    }
+    
+    .topCountriesFrame {
+        height: 570px;
+        width: 310px;
+        overflow: hidden;
+        table-layout: fixed;
+        position: absolute;
+        top: 80px;
+        left: 10px;
+    }
+    
+    #topCountries {
+        text-align: left;
+        position: absolute;
+        table-layout: fixed;
+        width: 310px;
+    }
+    
+    #topCountries td {
+        /* text-align: left; */
+        color: #a09684;
+        overflow: hidden;
+        font-size: 18px;
+        /* border-spacing: 30px 0px */
+    }
+    
+    #topCountries td:nth-of-type(1) {
+        width: 23px;
+        height: 0px;
+        text-align: right;
+    }
+    /*Setting the width of column 1.*/
+    
+    #topCountries td:nth-of-type(2) {
+        border-left: 10px solid rgb(30, 30, 30);
+        width: 118px;
+    }
+    /*Setting the width of column 2.*/
+    
+    #topCountries td:nth-of-type(3) {
+        width: 110px;
+    }
+    
+    #topCountries td:nth-of-type(4) {
+        width: 23px;
+    }
+    /* Th
+    /* The img fade in animation works only for the first img... */
+    
+    #img {
+        position: absolute;
+        left: 355px;
+        top: 220px;
+        -webkit-animation: fadein2 1s;
+    }
+    
+    @keyframes fadein2 {
+        from {
+            opacity: 0%;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+    
+    #countryIncreasesFadeIn {
+        -webkit-animation: fadein 2s;
+    }
+    
+    @keyframes fadein {
+        from {
+            color: #a09684;
+        }
+        to {
+            color: #53853f;
+            ;
+        }
+    }
+    
+    #countryIncreasesFadeOut {
+        -webkit-animation: fadeout 3s;
+    }
+    
+    @keyframes fadeout {
+        from {
+            color: #53853f;
+            ;
+        }
+        to {
+            color: #a09684;
+        }
+    }
+    
+    #japanIncreasesFadeIn {
+        -webkit-animation: fadein1 2s;
+    }
+    
+    @keyframes fadein1 {
+        from {
+            color: #a09684;
+        }
+        to {
+            color: #a84629;
+        }
+    }
+    
+    #japanIncreasesFadeOut {
+        -webkit-animation: fadeout1 3s;
+    }
+    
+    @keyframes fadeout1 {
+        from {
+            color: #a84629;
+        }
+        to {
+            color: #a09684;
+        }
+    }
+    
+    .dateTimeFrame {
+        position: absolute;
+        left: 0px;
+        top: 646px;
+    }
+    
+    #dateTimeData {
+        text-align: left;
+    }
+    
+    #London {
+        padding-left: 13px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
+    
+    #NewYork {
+        padding-left: 13px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
+    
+    #Tokyo {
+        padding-left: 13px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
+    
+    #NewDelhi {
+        padding-left: 13px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
+    
+    #Moscow {
+        padding-left: 13px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
+    
+    #year {
+        padding-left: 23px;
+        text-align: left;
+        color: #869fbd;
+        font-size: 18px;
+    }
