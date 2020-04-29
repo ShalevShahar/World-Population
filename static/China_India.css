@@ -6,173 +6,130 @@
         /* font-family: 'Segoe Print'; */
     }
     
-    #imgTitle {
+    #chinaFlag {
+        position: absolute;
+        left: 180px;
+        top: 20px;
+        margin: 0px;
+    }
+    
+    .chinaTitle {
         color: #869fbd;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 510px;
-        top: 160px;
-        text-align: center;
+        left: 20px;
+        top: 0px;
         margin: 0px;
-        /* font-family: 'Segoe Print'; */
         font-family: 'Segoe Print';
     }
     
-    .totalWorldTitle {
+    #indiaFlag {
+        position: absolute;
+        left: 530px;
+        top: 20px;
+        margin: 0px;
+    }
+    
+    .indiaTitle {
         color: #869fbd;
-        font-size: 15px;
+        font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 440px;
+        left: 400px;
+        top: 0px;
+        margin: 0px;
+        font-family: 'Segoe Print';
+    }
+    
+    .graphTitle {
+        color: #869fbd;
+        font-size: 40px;
+        font-weight: bold;
+        position: absolute;
+        left: 900px;
         top: 0px;
         text-align: center;
         margin: 0px;
         font-family: 'Segoe Print';
     }
     
-    .runnigCount {
-        /* color: rgb(35, 129, 35); */
-        /* color: #84ac27; */
-        /* font-size: 9ex; */
-        color: #a09684;
-        font-size: 5ex;
-        position: relative;
-        text-align: center;
-        display: inline;
-        left: 450px;
-        top: 65px;
-        font-family: 'Segoe Print';
-    }
-    
-    .allCountriesTitle {
-        /* color: #e9c72f; */
-        color: #869fbd;
-        font-size: 15px;
-        font-weight: bold;
+    #graph {
         position: absolute;
-        left: 920px;
-        top: 0px;
-        font-family: 'Segoe Print';
+        left: 700px;
+        top: 60px;
     }
     
-    .tableCountriesFrame {
-        height: 570px;
-        width: 340px;
-        overflow: hidden;
-        table-layout: fixed;
-        position: absolute;
-        top: 80px;
-        left: 920px;
-    }
-    
-    #tableCountries {
+    #popTableID {
+        left: 30px;
+        top: 150px;
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 340px;
+        width: 640px;
     }
     
-    #tableCountries th,
+    #popTableID th,
     td {
         overflow: hidden;
         text-align: left;
         color: #a09684;
-        font-size: 18px;
-        /* animation: scrolling 60s linear infinite; */
+        font-size: 24px;
     }
     
-    #tableCountries td:nth-of-type(1) {
+    #popTableID td:nth-of-type(1) {
         width: 30px;
         height: 0px;
         text-align: right;
-        /* margin: 5px 25px; */
     }
-    /*Setting the width of column 1.*/
     
-    #tableCountries td:nth-of-type(2) {
+    #popTableID td:nth-of-type(2) {
         width: 140px;
         border-left: 8px solid rgb(30, 30, 30)
     }
-    /*Setting the width of column 2.*/
     
-    #tableCountries td:nth-of-type(3) {
+    #popTableID td:nth-of-type(3) {
         width: 80px;
         text-align: left;
     }
-    /*Setting the width of column 3.*/
+    /* The img fade in animation works only for the first img... */
     
-    #tableCountries td:nth-of-type(4) {
-        width: 20px;
-        text-align: left;
+    .indiaBiggest {
+        position: absolute;
+        left: 200px;
+        top: 390px;
+        font-size: 24px;
     }
     
-    .topCountriesTitle {
-        /* color: #c75919; */
-        /* color: #9bca2c; */
+    .newsTitle {
         color: #869fbd;
-        font-size: 15px;
+        font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 25px;
-        top: 0px;
+        left: 900px;
+        top: 450px;
         text-align: center;
+        margin: 0px;
         font-family: 'Segoe Print';
     }
     
-    .topCountriesFrame {
-        height: 570px;
-        width: 310px;
-        overflow: hidden;
-        table-layout: fixed;
+    #news {
         position: absolute;
-        top: 80px;
-        left: 10px;
+        left: 700px;
+        top: 550px;
+        font-size: 24px;
     }
     
-    #topCountries {
-        text-align: left;
+    #china_IMG {
         position: absolute;
-        table-layout: fixed;
-        width: 310px;
+        left: 20px;
+        top: 465px;
     }
     
-    #topCountries td {
-        /* text-align: left; */
-        color: #a09684;
-        overflow: hidden;
-        font-size: 18px;
-        /* border-spacing: 30px 0px */
-    }
-    
-    #topCountries td:nth-of-type(1) {
-        width: 23px;
-        height: 0px;
-        text-align: right;
-    }
-    /*Setting the width of column 1.*/
-    
-    #topCountries td:nth-of-type(2) {
-        border-left: 10px solid rgb(30, 30, 30);
-        width: 118px;
-    }
-    /*Setting the width of column 2.*/
-    
-    #topCountries td:nth-of-type(3) {
-        width: 110px;
-    }
-    
-    #topCountries td:nth-of-type(4) {
-        width: 23px;
-    }
-    /* Th
-    /* The img fade in animation works only for the first img... */
-    
-    #img {
+    #india_IMG {
         position: absolute;
-        left: 355px;
-        top: 220px;
-        -webkit-animation: fadein2 1s;
+        left: 350px;
+        top: 465px;
     }
     
     @keyframes fadein2 {
