@@ -10,21 +10,21 @@ async function currentPopCalc() {
     //gap of the population between 2020 and 2019
     const gapPop2020Pop2019 = (parseFloat(pop2020) - parseFloat(pop2019))
         //epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
-    const timeJuliFirst2019 = 1561939200
-    const timeJuliFirst2020 = 1593561600
+    const timeJuliFirst2019 = 15619392000
+    const timeJuliFirst2020 = 15935616000
         //epoch time gap between 2020 an 2019
     const gap20192020 = (timeJuliFirst2020 - timeJuliFirst2019);
     //growth total world population persons per second 
     const popRate = (gapPop2020Pop2019 / gap20192020)
         // current Unix timestamp in seconds
-    const dateNow = Math.floor(new Date().getTime() * 0.001);
+    const dateNow = Math.floor(new Date().getTime() * 0.01);
     //calculation of the world population at the moment
     const popNow = (parseFloat(pop2019) + (parseFloat(popRate) * (parseFloat(dateNow) - parseFloat(timeJuliFirst2019))))
         //connection the HTML doc
     const obj = document.getElementById("c");
     obj.innerHTML = parseInt(popNow).toLocaleString();
     //repitition time in milisecs of the function 
-    setTimeout(currentPopCalc, 1000);
+    setTimeout(currentPopCalc, 200);
 }
 currentPopCalc()
 
