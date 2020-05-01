@@ -8,9 +8,46 @@ async function currentPopCalc() {
     //epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
     const timeJuliFirst2019 = 15619392000
     const timeJuliFirst2020 = 15935616000
+    const timeJuliFirst2026 = 1782910800
+    const timeJuliFirst2027 = 1814446800
         //epoch time gap between 2020 an 2019
     const gap20192020 = (timeJuliFirst2020 - timeJuliFirst2019);
+    const gap20262027 = (timeJuliFirst2027 - timeJuliFirst2026);
     const dateNow = Math.floor(new Date().getTime() * 0.01);
+    const dateNow1 = Math.floor(new Date().getTime() * 0.001);
+
+    // India will beat China 
+    const popIndia2026 = 1457308849 //Data was taken from "newData.ipynb" jupyter notebook, in "Static" folder 
+    const popIndia2027 = 1469338564
+    const gapIndia2027Pop2026 = (parseFloat(popIndia2027) - parseFloat(popIndia2026))
+    const IndiaPopRate2026 = (gapIndia2027Pop2026 / gap20262027)
+    const popChina2026 = 1460092251
+    const popChina2027 = 1461797638
+    const gapChina2027Pop2026 = (parseFloat(popChina2027) - parseFloat(popChina2026))
+    const ChinaPopRate2026 = (gapChina2027Pop2026 / gap20262027)
+        //Intersection of two lines formula
+    const IndiaBeatChinaEpoch = timeJuliFirst2026 + ((popChina2026 - popIndia2026) / (IndiaPopRate2026 - ChinaPopRate2026))
+    let countDownSeconds = parseInt(IndiaBeatChinaEpoch - dateNow1)
+        //Conversion of seconds to year, day,hour,minute,second
+    let factor = 60 * 60 * 24 * 365
+    countDownYear = Math.floor(countDownSeconds / factor)
+    countDownSeconds = Math.floor(countDownSeconds % factor)
+    factor = factor / 365
+    countDownDay = Math.floor(countDownSeconds / factor)
+    countDownSeconds = Math.floor(countDownSeconds % factor)
+    factor = factor / 24
+    countDownHour = Math.floor(countDownSeconds / factor)
+    countDownSeconds = Math.floor(countDownSeconds % factor)
+    factor = factor / 60
+    countDownMinute = Math.floor(countDownSeconds / factor)
+    countDownSeconds = Math.floor(countDownSeconds % factor)
+    console.log(countDownYear, countDownDay, countDownHour, countDownMinute, countDownSeconds)
+    const indiaBeatChinaScreen = 'India > China in ' + countDownYear + ' years, ' + countDownDay +
+        ' days, ' + countDownHour + ' hours, ' + countDownMinute + ' minutes, ' + countDownSeconds +
+        ' seconds'
+    const obj8 = document.getElementById("i");
+    obj8.innerHTML = indiaBeatChinaScreen.toLocaleString();
+
     //India total
     const popIndia2019 = data.split('\n').slice(2)[0].split(',')[1];
     const popIndia2020 = data.split('\n').slice(2)[0].split(',')[4];
