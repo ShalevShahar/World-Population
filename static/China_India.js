@@ -41,7 +41,6 @@ async function currentPopCalc() {
     factor = factor / 60
     countDownMinute = Math.floor(countDownSeconds / factor)
     countDownSeconds = Math.floor(countDownSeconds % factor)
-    console.log(countDownYear, countDownDay, countDownHour, countDownMinute, countDownSeconds)
     const indiaBeatChinaScreen = 'India > China in ' + countDownYear + ' years, ' + countDownDay +
         ' days, ' + countDownHour + ' hours, ' + countDownMinute + ' minutes, ' + countDownSeconds +
         ' seconds'
@@ -108,6 +107,86 @@ async function currentPopCalc() {
 currentPopCalc()
 
 
+///PHOTOS CHINA 
+
+var images = []
+let num_pics_c = 40;
+for (let i = 0; i < num_pics_c; i++) {
+    images[i] = "/static/China_India_photos/china/China (" + i + ").jpg";
+}
+
+///PHOTOS India 
+
+var images2 = []
+let num_pics_i = 36;
+for (let i = 0; i < num_pics_i; i++) {
+    images2[i] = "/static/China_India_photos/india/India (" + i + ").jpg";
+}
+
+//// SHOW PHOTOS
+
+function showImg(countryID1, countryID2, imgPath, flag) {
+    let currID = flag ? countryID1 : countryID2;
+    let lastID = flag ? countryID2 : countryID1;
+
+    document.getElementById(lastID).className += "fadeOut";
+    document.getElementById(currID).src = imgPath;
+    document.getElementById(currID).className = "";
+    setTimeout(showPhotos, 2000);
+}
+
+
+let flag_c = true
+let flag_i = true
+x_c = 0
+x_i = 0
+
+function showPhotos() {
+
+    const show_china = Math.round(Math.random())
+    if (show_china) {
+        x_c = (x_c === images.length - 1) ? 0 : x_c + 1;
+        showImg('china_IMG', 'china_IMG2', images[x_c], flag_c)
+        flag_c = !flag_c
+    } else {
+        x_i = (x_i === images2.length - 1) ? 0 : x_i + 1;
+        showImg('india_IMG', 'india_IMG2', images2[x_i], flag_i)
+        flag_i = !flag_i
+    };
+}
+showPhotos();
+
+
+
+
+/////FUN FACTS
+
+let x_fc = 0,
+    china_fact = 0,
+    x_fi = 0
+
+async function factsIndiaChina() {
+    //fetching the file and converting it to text
+
+    if (china_fact) {
+        const facts = await fetch('/static/ChinaFacts.txt');
+        const data = await facts.text();
+        const separatedFactsChina = data.split('\n')
+        x_fc = (x_fc == separatedFactsChina.length - 1) ? 0 : x_fc + 1;
+        const obj15 = document.getElementById("news")
+        obj15.innerHTML = separatedFactsChina[x_fc].toLocaleString()
+    } else {
+        const facts1 = await fetch('/static/IndiaFacts.txt');
+        const data1 = await facts1.text();
+        const separatedFactsIndia = data1.split('\n')
+        x_fi = (x_fi == separatedFactsIndia.length - 1) ? 0 : x_fi + 1;
+        const obj15 = document.getElementById("news")
+        obj15.innerHTML = separatedFactsIndia[x_fi].toLocaleString()
+    }
+    china_fact = !china_fact
+    setTimeout(factsIndiaChina, 5000);
+}
+factsIndiaChina()
 
 ////// TIME IN SELECTED CITIES
 

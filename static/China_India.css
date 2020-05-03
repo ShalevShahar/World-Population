@@ -1,5 +1,5 @@
     body {
-        /* background-color: rgb(30, 30, 30); */
+        background-color: rgb(30, 30, 30);
         /* background-color: black; */
         /* font-family: narkisim; */
         font-family: 'Malgun Gothic';
@@ -124,12 +124,52 @@
         position: absolute;
         left: 20px;
         top: 465px;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+    
+    #china_IMG.fadeOut {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    
+    #china_IMG2 {
+        position: absolute;
+        left: 20px;
+        top: 465px;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+    
+    #china_IMG2.fadeOut {
+        opacity: 0;
+        transition: opacity 2s;
     }
     
     #india_IMG {
         position: absolute;
         left: 350px;
         top: 465px;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+    
+    #india_IMG.fadeOut {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    
+    #india_IMG2 {
+        position: absolute;
+        left: 350px;
+        top: 465px;
+        opacity: 1;
+        transition: opacity 2s;
+    }
+    
+    #india_IMG2.fadeOut {
+        opacity: 0;
+        transition: opacity 2s;
     }
     
     @keyframes fadein2 {
@@ -139,6 +179,10 @@
         to {
             opacity: 100%;
         }
+    }
+    
+    #news {
+        color: beige;
     }
     
     #countryIncreasesFadeIn {
