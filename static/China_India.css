@@ -4,6 +4,8 @@
         /* font-family: narkisim; */
         font-family: 'Malgun Gothic';
         /* font-family: 'Segoe Print'; */
+        /* font-family: Open-Sans; */
+        color: #a09684;
     }
     
     #chinaFlag {
@@ -19,14 +21,15 @@
         font-weight: bold;
         position: absolute;
         left: 20px;
-        top: 0px;
+        top: 30px;
         margin: 0px;
-        font-family: 'Segoe Print';
+        color: rgb(241, 73, 73);
+        /* font-family: 'Segoe Print'; */
     }
     
     #indiaFlag {
         position: absolute;
-        left: 530px;
+        left: 510px;
         top: 20px;
         margin: 0px;
     }
@@ -36,37 +39,39 @@
         font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 400px;
-        top: 0px;
+        left: 380px;
+        top: 30px;
         margin: 0px;
-        font-family: 'Segoe Print';
+        color: rgb(185, 142, 61);
+        /* font-family: 'Segoe Print'; */
     }
     
-    .graphTitle {
+    #graphTitle {
         color: #869fbd;
-        font-size: 40px;
+        font-size: 25px;
         font-weight: bold;
         position: absolute;
-        left: 900px;
-        top: 0px;
+        left: 750px;
+        align-items: center;
+        top: 20px;
         text-align: center;
         margin: 0px;
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     #graph {
         position: absolute;
         left: 700px;
-        top: 60px;
+        top: 80px;
     }
     
     #popTableID {
-        left: 30px;
-        top: 150px;
+        left: 10px;
+        top: 120px;
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 640px;
+        width: 650px;
     }
     
     #popTableID th,
@@ -74,34 +79,71 @@
         overflow: hidden;
         text-align: left;
         color: #a09684;
-        font-size: 24px;
+        font-size: 30px;
+        font-family: 'Segoe Print';
     }
     
     #popTableID td:nth-of-type(1) {
-        width: 30px;
+        width: 73px;
         height: 0px;
-        text-align: right;
+        left: 0xp;
+        text-align: left;
+        font-size: 20px;
     }
     
     #popTableID td:nth-of-type(2) {
-        width: 140px;
-        border-left: 8px solid rgb(30, 30, 30)
+        width: 260px;
+        border-left: 20px solid rgb(30, 30, 30)
     }
     
     #popTableID td:nth-of-type(3) {
-        width: 80px;
+        width: 220px;
         text-align: left;
     }
     /* The img fade in animation works only for the first img... */
     
-    .indiaBiggest {
-        position: absolute;
-        left: 20px;
-        top: 390px;
-        font-size: 18px;
+    #ChinaTotal {
+        color: rgb(241, 73, 73);
     }
     
-    .newsTitle {
+    #ChinaMale {
+        color: rgb(241, 73, 73);
+    }
+    
+    #ChinaFemale {
+        color: rgb(241, 73, 73);
+    }
+    
+    #IndiaTotal {
+        color: rgb(185, 142, 61);
+    }
+    
+    #IndiaMail {
+        color: rgb(185, 142, 61);
+    }
+    
+    #IndiaFemale {
+        color: rgb(185, 142, 61);
+    }
+    
+    #indiaBiggestTitle {
+        position: absolute;
+        left: 30px;
+        top: 320px;
+        font-size: 20px;
+        color: rgb(134, 197, 168);
+    }
+    
+    .indiaBiggest {
+        position: absolute;
+        left: 140px;
+        top: 360px;
+        font-size: 28px;
+        width: 450px;
+        align-items: center;
+        color: rgb(134, 197, 168);
+    }
+    /* .newsTitle {
         color: #869fbd;
         font-size: 40px;
         font-weight: bold;
@@ -112,12 +154,14 @@
         margin: 0px;
         font-family: 'Segoe Print';
     }
+     */
     
     #news {
         position: absolute;
         left: 700px;
-        top: 550px;
+        top: 500px;
         font-size: 24px;
+        width: 500px;
     }
     
     #china_IMG {
@@ -249,20 +293,6 @@
         text-align: left;
     }
     
-    #London {
-        padding-left: 13px;
-        text-align: left;
-        color: #869fbd;
-        font-size: 18px;
-    }
-    
-    #NewYork {
-        padding-left: 13px;
-        text-align: left;
-        color: #869fbd;
-        font-size: 18px;
-    }
-    
     #Tokyo {
         padding-left: 13px;
         text-align: left;
@@ -271,21 +301,14 @@
     }
     
     #NewDelhi {
-        padding-left: 13px;
-        text-align: left;
-        color: #869fbd;
-        font-size: 18px;
-    }
-    
-    #Moscow {
-        padding-left: 13px;
+        padding-left: 103px;
         text-align: left;
         color: #869fbd;
         font-size: 18px;
     }
     
     #year {
-        padding-left: 23px;
+        padding-left: 403px;
         text-align: left;
         color: #869fbd;
         font-size: 18px;

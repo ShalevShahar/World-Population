@@ -41,7 +41,7 @@ async function currentPopCalc() {
     factor = factor / 60
     countDownMinute = Math.floor(countDownSeconds / factor)
     countDownSeconds = Math.floor(countDownSeconds % factor)
-    const indiaBeatChinaScreen = 'India > China in ' + countDownYear + ' years, ' + countDownDay +
+    const indiaBeatChinaScreen = countDownYear + ' years, ' + countDownDay +
         ' days, ' + countDownHour + ' hours, ' + countDownMinute + ' minutes, ' + countDownSeconds +
         ' seconds'
     const obj8 = document.getElementById("i");
@@ -159,6 +159,36 @@ showPhotos();
 
 
 
+//////Graphs
+
+var graphs = [],
+    x = -1,
+    titleGraph = [];
+
+graphs[0] = "/static/China_India_graphs/chinaIndiaPop-v6-81s.gif";
+graphs[1] = "/static/China_India_graphs/chinaIndia-maleVSfemale-81s.gif";
+
+titleGraph[0] = "Total Population 1950 - 2020";
+titleGraph[1] = "More Males than Females (in Millions)";
+
+
+function displayGraphsTitles() {
+    x = (x === graphs.length - 1) ? 0 : x + 1;
+    document.getElementById("graph").src = graphs[x];
+    document.getElementById("graphTitle").innerHTML = titleGraph[x];
+}
+var intervalID3 = setInterval(displayGraphsTitles, 80000)
+
+
+
+
+
+
+
+
+
+
+
 /////FUN FACTS
 
 let x_fc = 0,
@@ -193,16 +223,10 @@ factsIndiaChina()
 var intervalID2 = setInterval(currentTime, 1000);
 
 function currentTime() {
-    var London = 'London - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Europe/London" })
     var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
-    var NewYork = 'New York - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "America/New_York" })
-    var Tokyo = 'Tokyo - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Tokyo" })
-    var NewDelhi = 'New Delhi - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Calcutta" })
-    var Moscow = 'Moscow - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Europe/Moscow" })
-    document.getElementById("London").innerHTML = London
+    var Tokyo = 'BEIJING - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Shanghai" })
+    var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Calcutta" })
     document.getElementById("year").innerHTML = year
-    document.getElementById("NewYork").innerHTML = NewYork
     document.getElementById("Tokyo").innerHTML = Tokyo
     document.getElementById("NewDelhi").innerHTML = NewDelhi
-    document.getElementById("Moscow").innerHTML = Moscow
 }
