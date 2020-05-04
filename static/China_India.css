@@ -67,7 +67,7 @@
     
     #popTableID {
         left: 10px;
-        top: 120px;
+        top: 140px;
         text-align: left;
         position: absolute;
         table-layout: fixed;
@@ -80,12 +80,12 @@
         text-align: left;
         color: #a09684;
         font-size: 30px;
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     #popTableID td:nth-of-type(1) {
         width: 73px;
-        height: 0px;
+        height: 50px;
         left: 0xp;
         text-align: left;
         font-size: 20px;
@@ -104,6 +104,7 @@
     
     #ChinaTotal {
         color: rgb(241, 73, 73);
+        font-size: 36PX;
     }
     
     #ChinaMale {
@@ -116,6 +117,7 @@
     
     #IndiaTotal {
         color: rgb(185, 142, 61);
+        font-size: 36PX;
     }
     
     #IndiaMail {

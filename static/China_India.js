@@ -41,9 +41,9 @@ async function currentPopCalc() {
     factor = factor / 60
     countDownMinute = Math.floor(countDownSeconds / factor)
     countDownSeconds = Math.floor(countDownSeconds % factor)
-    const indiaBeatChinaScreen = countDownYear + ' years, ' + countDownDay +
-        ' days, ' + countDownHour + ' hours, ' + countDownMinute + ' minutes, ' + countDownSeconds +
-        ' seconds'
+    const indiaBeatChinaScreen = countDownYear + ' YEARS, ' + countDownDay +
+        ' DAYS, ' + countDownHour + ' HOURS, ' + countDownMinute + ' MINUTES, ' + countDownSeconds +
+        ' SECONDS'
     const obj8 = document.getElementById("i");
     obj8.innerHTML = indiaBeatChinaScreen.toLocaleString();
 
@@ -168,8 +168,8 @@ var graphs = [],
 graphs[0] = "/static/China_India_graphs/chinaIndiaPop-v6-81s.gif";
 graphs[1] = "/static/China_India_graphs/chinaIndia-maleVSfemale-81s.gif";
 
-titleGraph[0] = "Total Population 1950 - 2020";
-titleGraph[1] = "More Males than Females (in Millions)";
+titleGraph[0] = "TOTAL POPULATION 1950 - 2020";
+titleGraph[1] = "MORE MALES THAN FEMALES (IN MILLIONS)";
 
 
 function displayGraphsTitles() {
