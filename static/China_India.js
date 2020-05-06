@@ -41,9 +41,9 @@ async function currentPopCalc() {
     factor = factor / 60
     countDownMinute = Math.floor(countDownSeconds / factor)
     countDownSeconds = Math.floor(countDownSeconds % factor)
-    const indiaBeatChinaScreen = countDownYear + ' YEARS, ' + countDownDay +
-        ' DAYS, ' + countDownHour + ' HOURS, ' + countDownMinute + ' MINUTES, ' + countDownSeconds +
-        ' SECONDS'
+    const indiaBeatChinaScreen = countDownYear + '\xa0\xa0\xa0\xa0' + countDownDay +
+        '\xa0\xa0\xa0\xa0' + countDownHour + '\xa0\xa0\xa0\xa0' + countDownMinute + '\xa0\xa0\xa0\xa0' + countDownSeconds +
+        '\xa0\xa0\xa0\xa0'
     const obj8 = document.getElementById("i");
     obj8.innerHTML = indiaBeatChinaScreen.toLocaleString();
 
