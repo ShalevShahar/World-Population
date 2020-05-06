@@ -1,4 +1,4 @@
-//////////////// MIDDLE TOTAL POP
+////////////////// MIDDLE TOTAL POP
 
 async function currentPopCalc() {
     //fetching the file and converting it to text
