@@ -41,9 +41,9 @@ async function currentPopCalc() {
     factor = factor / 60
     countDownMinute = Math.floor(countDownSeconds / factor)
     countDownSeconds = Math.floor(countDownSeconds % factor)
-    const indiaBeatChinaScreen = countDownYear + ' YEARS, ' + countDownDay +
-        ' DAYS, ' + countDownHour + ' HOURS, ' + countDownMinute + ' MINUTES, ' + countDownSeconds +
-        ' SECONDS'
+    const indiaBeatChinaScreen = countDownYear + '\xa0\xa0\xa0' + countDownDay +
+        '\xa0\xa0\xa0' + countDownHour + '\xa0\xa0\xa0' + countDownMinute + '\xa0\xa0\xa0' + countDownSeconds +
+        '\xa0\xa0\xa0'
     const obj8 = document.getElementById("i");
     obj8.innerHTML = indiaBeatChinaScreen.toLocaleString();
 
@@ -132,7 +132,7 @@ function showImg(countryID1, countryID2, imgPath, flag) {
     document.getElementById(lastID).className += "fadeOut";
     document.getElementById(currID).src = imgPath;
     document.getElementById(currID).className = "";
-    setTimeout(showPhotos, 2000);
+    setTimeout(showPhotos, 10000);
 }
 
 
@@ -177,7 +177,7 @@ function displayGraphsTitles() {
     document.getElementById("graph").src = graphs[x];
     document.getElementById("graphTitle").innerHTML = titleGraph[x];
 }
-var intervalID3 = setInterval(displayGraphsTitles, 80000)
+var intervalID3 = setInterval(displayGraphsTitles, 79500)
 
 
 
@@ -214,7 +214,7 @@ async function factsIndiaChina() {
         obj15.innerHTML = separatedFactsIndia[x_fi].toLocaleString()
     }
     china_fact = !china_fact
-    setTimeout(factsIndiaChina, 5000);
+    setTimeout(factsIndiaChina, 10000);
 }
 factsIndiaChina()
 

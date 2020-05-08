@@ -10,7 +10,7 @@
     
     #chinaFlag {
         position: absolute;
-        left: 180px;
+        left: 200px;
         top: 20px;
         margin: 0px;
     }
@@ -20,7 +20,7 @@
         font-size: 40px;
         font-weight: bold;
         position: absolute;
-        left: 20px;
+        left: 50px;
         top: 30px;
         margin: 0px;
         color: rgb(241, 73, 73);
@@ -48,12 +48,12 @@
     
     #graphTitle {
         color: #869fbd;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: bold;
         position: absolute;
-        left: 750px;
+        left: 735px;
         align-items: center;
-        top: 20px;
+        top: 30px;
         text-align: center;
         margin: 0px;
         /* font-family: 'Segoe Print'; */
@@ -71,7 +71,7 @@
         text-align: left;
         position: absolute;
         table-layout: fixed;
-        width: 650px;
+        width: 700px;
     }
     
     #popTableID th,
@@ -128,19 +128,27 @@
         color: rgb(185, 142, 61);
     }
     
+    #time {
+        position: absolute;
+        left: 195px;
+        top: 400px;
+        font-size: 12px;
+        color: rgb(134, 197, 168);
+    }
+    
     #indiaBiggestTitle {
         position: absolute;
         left: 30px;
         top: 320px;
-        font-size: 20px;
+        font-size: 22px;
         color: rgb(134, 197, 168);
     }
     
     .indiaBiggest {
         position: absolute;
-        left: 140px;
+        left: 200px;
         top: 360px;
-        font-size: 28px;
+        font-size: 32px;
         width: 450px;
         align-items: center;
         color: rgb(134, 197, 168);
@@ -160,16 +168,16 @@
     
     #news {
         position: absolute;
-        left: 700px;
+        left: 740px;
         top: 500px;
-        font-size: 24px;
-        width: 500px;
+        font-size: 26px;
+        width: 530px;
     }
     
     #china_IMG {
         position: absolute;
         left: 20px;
-        top: 465px;
+        top: 445px;
         opacity: 1;
         transition: opacity 2s;
     }
@@ -182,7 +190,7 @@
     #china_IMG2 {
         position: absolute;
         left: 20px;
-        top: 465px;
+        top: 445px;
         opacity: 1;
         transition: opacity 2s;
     }
@@ -194,8 +202,8 @@
     
     #india_IMG {
         position: absolute;
-        left: 350px;
-        top: 465px;
+        left: 380px;
+        top: 445px;
         opacity: 1;
         transition: opacity 2s;
     }
@@ -207,8 +215,8 @@
     
     #india_IMG2 {
         position: absolute;
-        left: 350px;
-        top: 465px;
+        left: 380px;
+        top: 445px;
         opacity: 1;
         transition: opacity 2s;
     }
@@ -228,7 +236,7 @@
     }
     
     #news {
-        color: beige;
+        color: rgb(89, 102, 114);
     }
     
     #countryIncreasesFadeIn {
@@ -288,7 +296,7 @@
     .dateTimeFrame {
         position: absolute;
         left: 0px;
-        top: 646px;
+        top: 666px;
     }
     
     #dateTimeData {
@@ -303,14 +311,14 @@
     }
     
     #NewDelhi {
-        padding-left: 103px;
+        padding-left: 153px;
         text-align: left;
         color: #869fbd;
         font-size: 18px;
     }
     
     #year {
-        padding-left: 403px;
+        padding-left: 503px;
         text-align: left;
         color: #869fbd;
         font-size: 18px;
