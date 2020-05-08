@@ -16,53 +16,53 @@
         text-align: center;
         margin: 0px;
         /* font-family: 'Segoe Print'; */
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     .totalWorldTitle {
-        color: #869fbd;
-        font-size: 15px;
+        color: #d49b31;
+        font-size: 13px;
         font-weight: bold;
         position: absolute;
         left: 440px;
         top: 0px;
         text-align: center;
         margin: 0px;
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     .runnigCount {
         /* color: rgb(35, 129, 35); */
         /* color: #84ac27; */
         /* font-size: 9ex; */
-        color: #a09684;
-        font-size: 5ex;
+        color: #d49b31;
+        font-size: 7ex;
         position: relative;
         text-align: center;
         display: inline;
-        left: 450px;
-        top: 65px;
-        font-family: 'Segoe Print';
+        left: 440px;
+        top: 55px;
+        /* font-family: 'Segoe Print'; */
     }
     
     .allCountriesTitle {
         /* color: #e9c72f; */
         color: #869fbd;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         position: absolute;
         left: 920px;
         top: 0px;
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     .tableCountriesFrame {
-        height: 570px;
+        height: 600px;
         width: 340px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 920px;
     }
     
@@ -77,14 +77,14 @@
     td {
         overflow: hidden;
         text-align: left;
-        color: #a09684;
+        color: #7aa7cc;
         font-size: 18px;
         /* animation: scrolling 60s linear infinite; */
     }
     
     #tableCountries td:nth-of-type(1) {
         width: 30px;
-        height: 0px;
+        height: 1px;
         text-align: right;
         /* margin: 5px 25px; */
     }
@@ -111,22 +111,22 @@
         /* color: #c75919; */
         /* color: #9bca2c; */
         color: #869fbd;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         position: absolute;
         left: 25px;
         top: 0px;
         text-align: center;
-        font-family: 'Segoe Print';
+        /* font-family: 'Segoe Print'; */
     }
     
     .topCountriesFrame {
-        height: 570px;
+        height: 600px;
         width: 310px;
         overflow: hidden;
         table-layout: fixed;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 10px;
     }
     
@@ -139,7 +139,7 @@
     
     #topCountries td {
         /* text-align: left; */
-        color: #a09684;
+        color: #7aa7cc;
         overflow: hidden;
         font-size: 18px;
         /* border-spacing: 30px 0px */
@@ -147,7 +147,7 @@
     
     #topCountries td:nth-of-type(1) {
         width: 23px;
-        height: 0px;
+        height: 1px;
         text-align: right;
     }
     /*Setting the width of column 1.*/
@@ -190,7 +190,7 @@
     
     @keyframes fadein {
         from {
-            color: #a09684;
+            color: #7aa7cc;
         }
         to {
             color: #53853f;
@@ -208,7 +208,7 @@
             ;
         }
         to {
-            color: #a09684;
+            color: #7aa7cc;
         }
     }
     
@@ -218,7 +218,7 @@
     
     @keyframes fadein1 {
         from {
-            color: #a09684;
+            color: #7aa7cc;
         }
         to {
             color: #a84629;
@@ -234,7 +234,7 @@
             color: #a84629;
         }
         to {
-            color: #a09684;
+            color: #7aa7cc;
         }
     }
     
@@ -251,35 +251,35 @@
     #London {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: #33812c;
         font-size: 18px;
     }
     
     #NewYork {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: #a3469f;
         font-size: 18px;
     }
     
     #Tokyo {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: #86921b;
         font-size: 18px;
     }
     
     #NewDelhi {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: #e27e7a;
         font-size: 18px;
     }
     
     #Moscow {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: #2c7e77;
         font-size: 18px;
     }
     

@@ -130,8 +130,8 @@ images[1] = "/static/next_all_45s_F.gif";
 // images[1] = "/static/b_next_world.png";
 // images[2] = "/static/aa.png";
 // images[3] = "/static/b_nex_all.png";
-title[0] = "Past 70 Years";
-title[1] = "Estimation";
+title[0] = "PAST 70 YEARS";
+title[1] = "ESTIMATION";
 // title[2] = "kkuuu";
 // title[3] = "asldkaskjdh";
 
