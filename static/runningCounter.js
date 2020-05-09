@@ -125,8 +125,8 @@ var images = [],
     x = -1,
     title = [];
 
-images[0] = "/static/last70_all_v7_45s.gif";
-images[1] = "/static/next_all_45s_F.gif";
+images[0] = "/static/last70_all_v8_45s.gif";
+images[1] = "/static/next_all_45s_fixed.gif";
 // images[1] = "/static/b_next_world.png";
 // images[2] = "/static/aa.png";
 // images[3] = "/static/b_nex_all.png";
