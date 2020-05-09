@@ -209,7 +209,7 @@ async function factsIndiaChina() {
         obj15.innerHTML = separatedFactsIndia[x_fi].toLocaleString()
     }
     china_fact = !china_fact
-    setTimeout(factsIndiaChina, 1000);
+    setTimeout(factsIndiaChina, 10000);
 }
 factsIndiaChina()
 
