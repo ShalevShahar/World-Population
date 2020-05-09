@@ -184,11 +184,6 @@ var intervalID3 = setInterval(displayGraphsTitles, 79500)
 
 
 
-
-
-
-
-
 /////FUN FACTS
 
 let x_fc = 0,
@@ -214,7 +209,7 @@ async function factsIndiaChina() {
         obj15.innerHTML = separatedFactsIndia[x_fi].toLocaleString()
     }
     china_fact = !china_fact
-    setTimeout(factsIndiaChina, 10000);
+    setTimeout(factsIndiaChina, 1000);
 }
 factsIndiaChina()
 
@@ -224,9 +219,9 @@ var intervalID2 = setInterval(currentTime, 1000);
 
 function currentTime() {
     var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
-    var Tokyo = 'BEIJING - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Shanghai" })
-    var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-GB", { day: '2-digit', month: '2-digit', timeZone: "Asia/Calcutta" })
+    var Beijing = 'BEIJING - ' + new Date().toLocaleTimeString("en-US", { month: 'short', day: '2-digit', timeZone: "Asia/Shanghai" })
+    var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-US", { day: '2-digit', month: 'short', timeZone: "Asia/Calcutta" })
     document.getElementById("year").innerHTML = year
-    document.getElementById("Tokyo").innerHTML = Tokyo
+    document.getElementById("Beijing").innerHTML = Beijing
     document.getElementById("NewDelhi").innerHTML = NewDelhi
 }

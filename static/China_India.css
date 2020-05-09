@@ -153,21 +153,13 @@
         align-items: center;
         color: rgb(134, 197, 168);
     }
-    /* .newsTitle {
-        color: #869fbd;
-        font-size: 40px;
-        font-weight: bold;
-        position: absolute;
-        left: 900px;
-        top: 450px;
-        text-align: center;
-        margin: 0px;
-        font-family: 'Segoe Print';
-    }
-     */
     
-    #news {
-        position: absolute;
+    #i {
+        align-content: left;
+    }
+    
+    .newsBox {
+        position: relative;
         left: 740px;
         top: 500px;
         font-size: 26px;
@@ -303,17 +295,17 @@
         text-align: left;
     }
     
-    #Tokyo {
+    #Beijing {
         padding-left: 13px;
         text-align: left;
-        color: #869fbd;
+        color: rgb(241, 73, 73);
         font-size: 18px;
     }
     
     #NewDelhi {
-        padding-left: 153px;
+        padding-left: 123px;
         text-align: left;
-        color: #869fbd;
+        color: rgb(185, 142, 61);
         font-size: 18px;
     }
     
@@ -321,5 +313,5 @@
         padding-left: 503px;
         text-align: left;
         color: #869fbd;
-        font-size: 18px;
+        font-size: 20px;
     }
