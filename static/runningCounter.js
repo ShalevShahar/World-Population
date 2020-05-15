@@ -2,7 +2,7 @@
 
 async function currentPopCalc() {
     //fetching the file and converting it to text
-    const response = await fetch('/static/countries2019-2020.csv');
+    const response = await fetch('/static/World_Population/countries2019-2020.csv');
     const data = await response.text();
     //splitting and slicing the data so it will include only the total world population.
     const pop2019 = data.split('\n').slice(235)[0].split(',')[1];
@@ -125,8 +125,8 @@ var images = [],
     x = -1,
     title = [];
 
-images[0] = "/static/last70_all_v8_45s.gif";
-images[1] = "/static/next_all_45s_fixed.gif";
+images[0] = "/static/World_Population/last70_all_v8_45s.gif";
+images[1] = "/static/World_Population/next_all_45s_fixed.gif";
 // images[1] = "/static/b_next_world.png";
 // images[2] = "/static/aa.png";
 // images[3] = "/static/b_nex_all.png";
