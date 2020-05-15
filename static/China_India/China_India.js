@@ -2,7 +2,7 @@
 
 async function currentPopCalc() {
     //fetching the file and converting it to text
-    const response = await fetch('/static/ChinaIndia2019-2020.csv');
+    const response = await fetch('/static/China_India/ChinaIndia2019-2020.csv');
     const data = await response.text();
     //Time Gaps
     //epoch time of July 1th 2019 and July 1th 2020. Taken from https://www.epochconverter.com/
@@ -112,7 +112,7 @@ currentPopCalc()
 var images = []
 let num_pics_c = 40;
 for (let i = 0; i < num_pics_c; i++) {
-    images[i] = "/static/China_India_photos/china/China (" + i + ").jpg";
+    images[i] = "/static/China_India/China_India_photos/china/China (" + i + ").jpg";
 }
 
 ///PHOTOS India 
@@ -120,7 +120,7 @@ for (let i = 0; i < num_pics_c; i++) {
 var images2 = []
 let num_pics_i = 36;
 for (let i = 0; i < num_pics_i; i++) {
-    images2[i] = "/static/China_India_photos/india/India (" + i + ").jpg";
+    images2[i] = "/static/China_India/China_India_photos/india/India (" + i + ").jpg";
 }
 
 //// SHOW PHOTOS
@@ -165,8 +165,8 @@ var graphs = [],
     x = -1,
     titleGraph = [];
 
-graphs[0] = "/static/China_India_graphs/chinaIndiaPop-v6-81s.gif";
-graphs[1] = "/static/China_India_graphs/chinaIndia-maleVSfemale-81s.gif";
+graphs[0] = "/static/China_India/China_India_graphs/chinaIndiaPop-v6-81s.gif";
+graphs[1] = "/static/China_India/China_India_graphs/chinaIndia-maleVSfemale-81s.gif";
 
 titleGraph[0] = "TOTAL POPULATION 1950 - 2020";
 titleGraph[1] = "MORE MALES THAN FEMALES (IN MILLIONS)";
@@ -194,14 +194,14 @@ async function factsIndiaChina() {
     //fetching the file and converting it to text
 
     if (china_fact) {
-        const facts = await fetch('/static/ChinaFacts.txt');
+        const facts = await fetch('/static/China_India/ChinaFacts.txt');
         const data = await facts.text();
         const separatedFactsChina = data.split('\n')
         x_fc = (x_fc == separatedFactsChina.length - 1) ? 0 : x_fc + 1;
         const obj15 = document.getElementById("news")
         obj15.innerHTML = separatedFactsChina[x_fc].toLocaleString()
     } else {
-        const facts1 = await fetch('/static/IndiaFacts.txt');
+        const facts1 = await fetch('/static/China_India/IndiaFacts.txt');
         const data1 = await facts1.text();
         const separatedFactsIndia = data1.split('\n')
         x_fi = (x_fi == separatedFactsIndia.length - 1) ? 0 : x_fi + 1;
