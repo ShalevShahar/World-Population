@@ -19,7 +19,6 @@ async function deathNowFunc() {
     const dateNow = Math.floor(new Date().getTime() * 0.01);
     let timePassed = dateNow - time2020;
     const dataCut = data.split('\n').slice(2)
-
     let number
     let deathNow
     for (let i = 0; i < 30; i++) {
@@ -31,8 +30,74 @@ async function deathNowFunc() {
 
     }
     setTimeout(deathNowFunc, 1000);
+
+
+
 }
 deathNowFunc()
+
+
+async function deathTotal() {
+    const response = await fetch('/static/Death/death_2020-2021.csv');
+    const data = await response.text();
+    const time2020 = 15778404000
+    const time2021 = 16094628000
+    const secondsInYear = (time2021 - time2020);
+    const dateNow = Math.floor(new Date().getTime() * 0.01);
+    let timePassed = dateNow - time2020;
+    const dataCut = data.split('\n')
+    let number
+    let deathNow
+    const totalDeathIn2020 = dataCut[1].split(',')[1];
+    const Rate = (totalDeathIn2020 / (secondsInYear))
+    deathNow = (parseFloat(Rate) * (parseFloat(timePassed)))
+    number = document.getElementById("totalDeath");
+    number.innerHTML = parseInt(deathNow).toLocaleString();
+    setTimeout(deathTotal, 400);
+}
+
+deathTotal()
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+    var intervalID = setInterval(update_top_countries, 2000);
+
+    function update_top_countries() {
+        $.getJSON('https://api.covid19api.com/world/total',
+            function(data) {
+                var countryData = data['TotalDeaths']
+                document.getElementById("corona").innerHTML = countryData.toLocaleString();
+            }
+        )
+    }
+});
+
+// countryData += '<td>' + value.rank + '.' + '</td>';
+// countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
+// countryData += '<td id= "countryIncreasesFadeIn">' + value.toLocaleString() + '</td>';
+// countryData += '<td id= "countryIncreasesFadeIn">' + '+1' + '</td>';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ///PHOTOS CHINA 
@@ -152,4 +217,3 @@ deathNowFunc()
 //     document.getElementById("year").innerHTML = year
 //     document.getElementById("Beijing").innerHTML = Beijing
 //     document.getElementById("NewDelhi").innerHTML = NewDelhi
-// }
