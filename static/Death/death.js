@@ -13,19 +13,36 @@ async function deathNowFunc() {
     const response = await fetch('/static/Death/death_2020-2021.csv');
     const data = await response.text();
     //epoch time of January 1th 2020. Taken from https://www.epochconverter.com/
-    const time2020 = 15778404000
-    const time2021 = 16094628000
+    const time2020 = 1577840400000
+    const time2021 = 1609462800000
     const secondsInYear = (time2021 - time2020);
-    const dateNow = Math.floor(new Date().getTime() * 0.01);
-    let timePassed = dateNow - time2020;
+    const dateNow = Math.floor(new Date().getTime());
+    let timePassed = parseFloat(dateNow - time2020)
     const dataCut = data.split('\n').slice(2)
-    let number
-    let deathNow
+
+    let number, deathNow, deathBefore, deathAfter
     for (let i = 0; i < 29; i++) { //29 = the number of lines in dataCut
         const deathIn2020 = dataCut[i].split(',')[1];
-        const Rate = (deathIn2020 / (secondsInYear))
-        deathNow = (parseFloat(Rate) * (parseFloat(timePassed)))
-        number = document.getElementById("number" + i);
+        const Rate = parseFloat(deathIn2020 / (secondsInYear))
+
+        deathNow = Rate * timePassed //float
+        deathBefore = parseInt(deathNow - 1000 * Rate) //int
+        deathAfter = parseInt(deathNow + 1000 * Rate) //int
+
+        if (deathAfter > parseInt(deathNow)) {
+            //document.getElementById("number" + i).className = "nothing";
+            document.getElementById("number" + i).className = "fadeIn";
+            document.getElementById("plus" + i).className = "fadeInPlus";
+        } else if (parseInt(deathNow) > deathBefore) {
+            document.getElementById("number" + i).className = "fadeOut";
+            document.getElementById("plus" + i).className = "fadeOutPlus";
+        } else {
+            //if (document.getElementById("plus" + i).classList.contains('fadeInPlus')) {
+            document.getElementById("plus" + i).className = "nothing";
+            //}
+        }
+
+        number = document.getElementById("number" + i)
         number.innerHTML = parseInt(deathNow).toLocaleString();
     }
     setTimeout(deathNowFunc, 1000);
