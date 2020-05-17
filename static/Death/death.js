@@ -21,13 +21,12 @@ async function deathNowFunc() {
     const dataCut = data.split('\n').slice(2)
     let number
     let deathNow
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 29; i++) { //29 = the number of lines in dataCut
         const deathIn2020 = dataCut[i].split(',')[1];
         const Rate = (deathIn2020 / (secondsInYear))
         deathNow = (parseFloat(Rate) * (parseFloat(timePassed)))
         number = document.getElementById("number" + i);
         number.innerHTML = parseInt(deathNow).toLocaleString();
-
     }
     setTimeout(deathNowFunc, 1000);
 
@@ -51,21 +50,14 @@ async function deathTotal() {
     const totalDeathIn2020 = dataCut[1].split(',')[1];
     const Rate = (totalDeathIn2020 / (secondsInYear))
     deathNow = (parseFloat(Rate) * (parseFloat(timePassed)))
-    number = document.getElementById("totalDeath");
+    number = document.getElementById("totalDeathNumber");
     number.innerHTML = parseInt(deathNow).toLocaleString();
     setTimeout(deathTotal, 400);
 }
 
 deathTotal()
 
-
-
-
-
-
-
-
-
+////CORONA VIRUS API
 
 $(document).ready(function() {
     var intervalID = setInterval(update_top_countries, 2000);
@@ -79,6 +71,22 @@ $(document).ready(function() {
         )
     }
 });
+
+
+
+
+////// TIME IN SELECTED CITIES
+
+var intervalID2 = setInterval(currentTime, 1000);
+
+function currentTime() {
+    var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
+    var Beijing = 'BEIJING - ' + new Date().toLocaleTimeString("en-US", { month: 'short', day: '2-digit', timeZone: "Asia/Shanghai" })
+    var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-US", { day: '2-digit', month: 'short', timeZone: "Asia/Calcutta" })
+    document.getElementById("year").innerHTML = year
+    document.getElementById("Beijing").innerHTML = Beijing
+    document.getElementById("NewDelhi").innerHTML = NewDelhi
+}
 
 // countryData += '<td>' + value.rank + '.' + '</td>';
 // countryData += '<td id= "countryIncreasesFadeIn">' + key + '</td>';
@@ -205,15 +213,4 @@ $(document).ready(function() {
 //     setTimeout(factsIndiaChina, 10000);
 // }
 // factsIndiaChina()
-
-// ////// TIME IN SELECTED CITIES
-
-// var intervalID2 = setInterval(currentTime, 1000);
-
-// function currentTime() {
-//     var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
-//     var Beijing = 'BEIJING - ' + new Date().toLocaleTimeString("en-US", { month: 'short', day: '2-digit', timeZone: "Asia/Shanghai" })
-//     var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-US", { day: '2-digit', month: 'short', timeZone: "Asia/Calcutta" })
-//     document.getElementById("year").innerHTML = year
-//     document.getElementById("Beijing").innerHTML = Beijing
-//     document.getElementById("NewDelhi").innerHTML = NewDelhi
+///

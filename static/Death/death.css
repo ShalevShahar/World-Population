@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(30, 30, 30);
+    /* background-color: black; */
+    /* font-family: narkisim; */
+    font-family: 'Malgun Gothic';
+    /* font-family: 'Segoe Print'; */
+    /* font-family: Open-Sans; */
+    color: #a09684;
+}
+
+.bigTitle {
+    color: #869fbd;
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    left: 300px;
+    top: 0px;
+    margin: 0px;
+    color: rgb(241, 73, 73);
+    /* font-family: 'Segoe Print'; */
+}
+
+.photo {
+    box-shadow: 25px 25px 50px 0 rgb(30, 30, 30), -25px -25px 50px 0 rgb(30, 30, 30);
+    border-radius: 20px;
+    /* opacity: 0.8; */
+    /* box-shadow: 2px 2px rgb(151, 117, 117); */
+    /* transform: rotate3d(1, 1, 1, 5deg); */
+    ;
+}
+
+.nameCorona {
+    color: red;
+}
+
+#deathTableID1 {
+    left: 10px;
+    top: 50px;
+    text-align: left;
+    position: absolute;
+    table-layout: fixed;
+    width: 350px;
+    height: 600px;
+}
+
+#deathTableID1 th,
+td {
+    overflow: hidden;
+    text-align: left;
+    color: #a09684;
+    font-size: 22px;
+    /* font-family: 'Segoe Print'; */
+}
+
+#deathTableID1 td:nth-of-type(1) {
+    width: 75px;
+    height: 50px;
+    left: 0xp;
+    text-align: left;
+    font-size: 18px;
+}
+
+#deathTableID1 td:nth-of-type(2) {
+    width: 170px;
+    border-left: 20px solid rgb(30, 30, 30)
+}
+
+#deathTableID1 td:nth-of-type(3) {
+    width: 100px;
+    text-align: left;
+}
+
+#deathTableID2 {
+    left: 450px;
+    top: 50px;
+    text-align: left;
+    position: absolute;
+    table-layout: fixed;
+    width: 350px;
+    height: 600px;
+}
+
+#deathTableID2 th,
+td {
+    overflow: hidden;
+    text-align: left;
+    color: #a09684;
+    font-size: 20px;
+    /* font-family: 'Segoe Print'; */
+}
+
+#deathTableID2 td:nth-of-type(1) {
+    width: 75px;
+    height: 50px;
+    left: 0xp;
+    text-align: left;
+    font-size: 18px;
+}
+
+#deathTableID2 td:nth-of-type(2) {
+    width: 170px;
+    border-left: 20px solid rgb(30, 30, 30)
+}
+
+#deathTableID2 td:nth-of-type(3) {
+    width: 100px;
+    text-align: left;
+}
+
+#deathTableID3 {
+    left: 900px;
+    top: 50px;
+    text-align: left;
+    position: absolute;
+    table-layout: fixed;
+    width: 350px;
+    height: 600px;
+}
+
+#deathTableID3 th,
+td {
+    overflow: hidden;
+    text-align: left;
+    color: #a09684;
+    font-size: 20px;
+    /* font-family: 'Segoe Print'; */
+}
+
+#deathTableID3 td:nth-of-type(1) {
+    width: 75px;
+    height: 50px;
+    left: 0xp;
+    text-align: left;
+    font-size: 18px;
+}
+
+#deathTableID3 td:nth-of-type(2) {
+    width: 170px;
+    border-left: 20px solid rgb(30, 30, 30)
+}
+
+#deathTableID3 td:nth-of-type(3) {
+    width: 100px;
+    text-align: left;
+}
+
+#totalDeathTitle {
+    position: absolute;
+    left: 400px;
+    top: 660px;
+    font-size: 22px;
+    color: rgb(134, 197, 168);
+}
+
+#totalDeathNumber {
+    position: absolute;
+    left: 690px;
+    top: 650px;
+    font-size: 32px;
+    width: 450px;
+    align-items: center;
+    color: rgb(134, 197, 168);
+}
+
+.dateTimeFrame {
+    position: absolute;
+    left: 0px;
+    top: 666px;
+}
+
+#dateTimeData {
+    text-align: left;
+}
+
+#Beijing {
+    padding-left: 13px;
+    text-align: left;
+    color: rgb(241, 73, 73);
+    font-size: 18px;
+}
+
+#NewDelhi {
+    padding-left: 623px;
+    text-align: left;
+    color: rgb(185, 142, 61);
+    font-size: 18px;
+}
+
+#year {
+    padding-left: 103px;
+    text-align: left;
+    color: #869fbd;
+    font-size: 20px;
+}
