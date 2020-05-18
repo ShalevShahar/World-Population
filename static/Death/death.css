@@ -14,7 +14,7 @@ body {
     font-size: 40px;
     font-weight: bold;
     position: absolute;
-    left: 260px;
+    left: 80px;
     top: 0px;
     margin: 0px;
     color: rgb(187, 68, 68);
@@ -22,7 +22,7 @@ body {
 }
 
 #countDown {
-    left: 565px;
+    left: 530px;
     top: 100px;
     position: absolute;
     color: rgb(151, 151, 151);
@@ -77,7 +77,7 @@ body {
     text-align: left;
     position: absolute;
     table-layout: fixed;
-    width: 450px;
+    width: 430px;
     height: 600px;
 }
 
@@ -96,7 +96,7 @@ td {
 }
 
 #deathTableID1 td:nth-of-type(2) {
-    width: 260px;
+    width: 250px;
     text-align: left;
 }
 
@@ -111,7 +111,7 @@ td {
 }
 
 #deathTableID2 {
-    left: 490px;
+    left: 460px;
     top: 50px;
     text-align: left;
     position: absolute;
@@ -130,7 +130,7 @@ td {
 }
 
 #deathTableID2 td:nth-of-type(1) {
-    width: 70px;
+    width: 60px;
     height: 50px;
     left: 0xp;
     text-align: left;
@@ -138,7 +138,7 @@ td {
 }
 
 #deathTableID2 td:nth-of-type(2) {
-    width: 240px;
+    width: 220px;
     text-align: left;
 }
 
@@ -153,12 +153,12 @@ td {
 }
 
 #deathTableID3 {
-    left: 920px;
+    left: 855px;
     top: 50px;
     text-align: left;
     position: absolute;
     table-layout: fixed;
-    width: 450px;
+    width: 430px;
     height: 600px;
 }
 
@@ -180,33 +180,33 @@ td {
 }
 
 #deathTableID3 td:nth-of-type(2) {
-    width: 260px;
+    width: 230px;
     text-align: left;
 }
 
 #deathTableID3 td:nth-of-type(3) {
-    width: 60px;
+    width: 55px;
     text-align: left;
 }
 
 #deathTableID3 td:nth-of-type(4) {
-    width: 30px;
+    width: 25px;
     text-align: left;
 }
 
 #totalDeathTitle {
     position: absolute;
-    left: 450px;
-    top: 660px;
+    left: 420px;
+    top: 685px;
     font-size: 22px;
     color: rgb(134, 197, 168);
 }
 
 #totalDeathNumber {
     position: absolute;
-    left: 740px;
-    top: 650px;
-    font-size: 32px;
+    left: 725px;
+    top: 680px;
+    font-size: 28px;
     width: 450px;
     align-items: center;
     color: rgb(134, 197, 168);
@@ -215,7 +215,7 @@ td {
 .dateTimeFrame {
     position: absolute;
     left: 0px;
-    top: 666px;
+    top: 685px;
 }
 
 #dateTimeData {
@@ -230,7 +230,7 @@ td {
 }
 
 #year {
-    padding-left: 1003px;
+    padding-left: 920px;
     text-align: left;
     color: #869fbd;
     font-size: 20px;
