@@ -92,17 +92,42 @@ $(document).ready(function() {
 
 
 
+
+////// TIMER UNTIL NEXT CORONA UPDATE
+
+function countdown() {
+    // your code goes here
+    var count = 600;
+    var timerId = setInterval(function() {
+        count--;
+        console.log(count);
+
+        if (count == 0) {
+            // your code goes here
+            count = 600;
+        }
+        document.getElementById("countDown").innerHTML = "Time until Corona next update: " + count.toLocaleString();
+    }, 1000);
+}
+countdown();
+
+
+
+
+
+
+
 ////// TIME IN SELECTED CITIES
 
 var intervalID2 = setInterval(currentTime, 1000);
 
 function currentTime() {
     var year = new Date().toLocaleDateString("en-GB", { year: 'numeric', timeZone: "Europe/London" }) + '©'
-    var Beijing = 'BEIJING - ' + new Date().toLocaleTimeString("en-US", { month: 'short', day: '2-digit', timeZone: "Asia/Shanghai" })
-    var NewDelhi = 'NEW DELHI - ' + new Date().toLocaleTimeString("en-US", { day: '2-digit', month: 'short', timeZone: "Asia/Calcutta" })
+    var Beijing = 'LONDON - ' + new Date().toLocaleTimeString("en-US", { month: 'short', day: '2-digit', timeZone: "Europe/London" })
+
     document.getElementById("year").innerHTML = year
     document.getElementById("Beijing").innerHTML = Beijing
-    document.getElementById("NewDelhi").innerHTML = NewDelhi
+
 }
 
 // countryData += '<td>' + value.rank + '.' + '</td>';

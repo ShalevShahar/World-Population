@@ -5,7 +5,8 @@ body {
     font-family: 'Malgun Gothic';
     /* font-family: 'Segoe Print'; */
     /* font-family: Open-Sans; */
-    color: #dda550;
+    color: #cfa828;
+    color: white;
 }
 
 .bigTitle {
@@ -13,204 +14,223 @@ body {
     font-size: 40px;
     font-weight: bold;
     position: absolute;
-    left: 300px;
+    left: 260px;
     top: 0px;
     margin: 0px;
-    color: rgb(241, 73, 73);
+    color: rgb(187, 68, 68);
     /* font-family: 'Segoe Print'; */
 }
 
-
-/* .photo {
-    /* box-shadow: 25px 25px 50px 0 rgb(30, 30, 30), -25px -25px 50px 0 rgb(30, 30, 30);
-    border-radius: 20px; */
-
-
-/* opacity: 0.8; */
-
-
-/* box-shadow: 2px 2px rgb(151, 117, 117); */
-
-
-/* transform: rotate3d(1, 1, 1, 5deg); */
-
-;
-
+#countDown {
+    left: 565px;
+    top: 100px;
+    position: absolute;
+    color: rgb(151, 151, 151);
+    font-size: 14px;
 }
-*/ .fadeIn {
+
+.corona {
+    color: #e7e306;
+}
+
+.fadeIn {
     -webkit-animation: fadein 2s;
 }
+
 @keyframes fadein {
     from {
-        color: #a09684;
+        color: white;
     }
-    
     to {
-        color: red;
+        color: #c5a027;
     }
 }
+
 .fadeOut {
     -webkit-animation: fadeout 5s;
 }
+
 @keyframes fadeout {
     from {
-        color: red;
+        color: #c5a027;
     }
-    
     to {
-        color: #a09684;
+        color: white;
     }
 }
+
 .fadeInPlus {
-    color: #a09684;
+    color: #dda550;
 }
+
 .fadeOutPlus {
-    color: #a09684;
+    color: #dda550;
 }
+
 .nothing {
-    color: rgb(30, 30, 30);
+    color: rgb(70, 70, 70);
 }
+
 #deathTableID1 {
     left: 10px;
     top: 50px;
     text-align: left;
     position: absolute;
     table-layout: fixed;
-    width: 350px;
+    width: 450px;
     height: 600px;
 }
+
 #deathTableID1 th,
 td {
     overflow: hidden;
     text-align: left;
-    /* color: #a09684; */
-    
-    font-size: 22px;
-    /* font-family: 'Segoe Print'; */
 }
+
 #deathTableID1 td:nth-of-type(1) {
-    width: 75px;
+    width: 55px;
     height: 50px;
     left: 0xp;
     text-align: left;
-    font-size: 18px;
+    font-size: 10px;
 }
+
 #deathTableID1 td:nth-of-type(2) {
-    width: 170px;
-    border-left: 20px solid rgb(30, 30, 30)
+    width: 260px;
+    text-align: left;
 }
+
 #deathTableID1 td:nth-of-type(3) {
     width: 90px;
     text-align: left;
 }
+
 #deathTableID1 td:nth-of-type(4) {
-    width: 20px;
+    width: 25px;
     text-align: left;
 }
+
 #deathTableID2 {
-    left: 450px;
+    left: 490px;
     top: 50px;
     text-align: left;
     position: absolute;
     table-layout: fixed;
-    width: 350px;
+    width: 450px;
     height: 600px;
 }
+
 #deathTableID2 th,
 td {
     overflow: hidden;
     text-align: left;
     /* color: #a09684; */
-    
-    font-size: 20px;
+    font-size: 10px;
     /* font-family: 'Segoe Print'; */
 }
+
 #deathTableID2 td:nth-of-type(1) {
-    width: 75px;
+    width: 70px;
     height: 50px;
     left: 0xp;
     text-align: left;
-    font-size: 18px;
+    font-size: 10px;
 }
+
 #deathTableID2 td:nth-of-type(2) {
-    width: 170px;
-    border-left: 20px solid rgb(30, 30, 30)
-}
-#deathTableID2 td:nth-of-type(3) {
-    width: 100px;
+    width: 240px;
     text-align: left;
 }
+
+#deathTableID2 td:nth-of-type(3) {
+    width: 75px;
+    text-align: left;
+}
+
+#deathTableID2 td:nth-of-type(4) {
+    width: 25px;
+    text-align: left;
+}
+
 #deathTableID3 {
-    left: 900px;
+    left: 920px;
     top: 50px;
     text-align: left;
     position: absolute;
     table-layout: fixed;
-    width: 350px;
+    width: 450px;
     height: 600px;
 }
+
 #deathTableID3 th,
 td {
     overflow: hidden;
     text-align: left;
     /* color: #a09684; */
-    
-    font-size: 20px;
+    font-size: 21px;
     /* font-family: 'Segoe Print'; */
 }
+
 #deathTableID3 td:nth-of-type(1) {
-    width: 75px;
+    width: 55px;
     height: 50px;
     left: 0xp;
     text-align: left;
-    font-size: 18px;
+    font-size: 10px;
 }
+
 #deathTableID3 td:nth-of-type(2) {
-    width: 170px;
-    border-left: 20px solid rgb(30, 30, 30)
-}
-#deathTableID3 td:nth-of-type(3) {
-    width: 100px;
+    width: 260px;
     text-align: left;
 }
+
+#deathTableID3 td:nth-of-type(3) {
+    width: 60px;
+    text-align: left;
+}
+
+#deathTableID3 td:nth-of-type(4) {
+    width: 30px;
+    text-align: left;
+}
+
 #totalDeathTitle {
     position: absolute;
-    left: 400px;
+    left: 450px;
     top: 660px;
     font-size: 22px;
     color: rgb(134, 197, 168);
 }
+
 #totalDeathNumber {
     position: absolute;
-    left: 690px;
+    left: 740px;
     top: 650px;
     font-size: 32px;
     width: 450px;
     align-items: center;
     color: rgb(134, 197, 168);
 }
+
 .dateTimeFrame {
     position: absolute;
     left: 0px;
     top: 666px;
 }
+
 #dateTimeData {
     text-align: left;
 }
+
 #Beijing {
     padding-left: 13px;
     text-align: left;
-    color: rgb(241, 73, 73);
+    color: rgb(189, 178, 81);
     font-size: 18px;
 }
-#NewDelhi {
-    padding-left: 623px;
-    text-align: left;
-    color: rgb(185, 142, 61);
-    font-size: 18px;
-}
+
 #year {
-    padding-left: 103px;
+    padding-left: 1003px;
     text-align: left;
     color: #869fbd;
     font-size: 20px;
