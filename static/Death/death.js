@@ -77,7 +77,7 @@ deathTotal()
 ////CORONA VIRUS API
 
 $(document).ready(function() {
-    var intervalID = setInterval(update_top_countries, 2000);
+    var intervalID = setInterval(update_top_countries, 600000);
 
     function update_top_countries() {
         $.getJSON('https://api.covid19api.com/world/total',
@@ -106,7 +106,7 @@ function countdown() {
             // your code goes here
             count = 600;
         }
-        document.getElementById("countDown").innerHTML = "Time until Corona next update: " + count.toLocaleString();
+        document.getElementById("countDown").innerHTML = "Time until next Corona update: " + count.toLocaleString();
     }, 1000);
 }
 countdown();

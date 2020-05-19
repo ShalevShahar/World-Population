@@ -17,7 +17,7 @@ body {
     left: 80px;
     top: 0px;
     margin: 0px;
-    color: rgb(187, 68, 68);
+    color: rgb(196, 102, 102);
     /* font-family: 'Segoe Print'; */
 }
 
@@ -196,7 +196,7 @@ td {
 
 #totalDeathTitle {
     position: absolute;
-    left: 420px;
+    left: 430px;
     top: 685px;
     font-size: 22px;
     color: rgb(134, 197, 168);
@@ -204,7 +204,7 @@ td {
 
 #totalDeathNumber {
     position: absolute;
-    left: 725px;
+    left: 715px;
     top: 680px;
     font-size: 28px;
     width: 450px;
