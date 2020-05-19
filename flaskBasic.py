@@ -5,7 +5,7 @@ import numpy as np
 import time
 
 # Import data
-data = pd.read_csv('static/countries2019-2020.csv')
+data = pd.read_csv('static/World_Population/countries2019-2020.csv')
 df = pd.DataFrame(data)
 df = df[0:234] #remove the last row which is the total world
  
